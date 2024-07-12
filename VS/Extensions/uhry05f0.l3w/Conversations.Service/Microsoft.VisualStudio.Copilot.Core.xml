@@ -1,0 +1,760 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.Copilot.Core</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.VisualStudio.Copilot.Core.Resources.ActiveFileContextDescription">
+            <summary>Active document</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.Core.Resources.ErrorsScopeDescription">
+            <summary>Provided file errors</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.Core.Resources.HighlightedSelectionContextDescription">
+            <summary>Selection</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.Core.Resources.SolutionScopeDescription">
+            <summary>C# code in solution (preview)</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeMappers.Implementation.CodeMapperProvider">
+            <summary>
+            This service provides access to CodeMappers and Legacy CodeMappers.
+            CodeMappers are used to Replace or Insert code onto a target document.
+            Legacy CodeMappers will be removed eventually, as they also need to be changed to the
+            new format, but for now I will leave them there as they do provide some functionality for
+            unit tests mappings.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingManager">
+            <summary>
+            Manages code mapping between source and target programming languages.
+            This will serve as a layer for smart handling of the multiple mappers in conjunction with the diff mapper
+            and enable us to pick the best choice for the situation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingManager.GetMappedEditsAsync(Microsoft.VisualStudio.Copilot.Internal.MappingTarget,System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Copilot.CopilotContentCodePart},Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingOptions,System.Threading.CancellationToken)">
+            <summary>
+            Gets the mapped edits for a given target, and a given copilot content code part.
+            In the background this will use both the language mapper (if any) and the fallback mapper to determine
+            the best action case for the mapping.
+            </summary>
+            <param name="target">The target mapping.</param>
+            <param name="contentBlocks">The code content blocks to map.</param>
+            <param name="mappingOptions"><see cref="T:Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingOptions" /> Represents the configurable options for the code mapper.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>The mapped edits.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingManager.GetAppropriateMapper(Microsoft.VisualStudio.Copilot.CopilotContentCodePart)">
+            <summary>
+            This will attempt to obtain a language mapper or the diff mapper.
+            </summary>
+            <param name="content">The content from copilot.</param>
+            <returns>Returns the most appropriate mapper for the situation. If no language mapper is found a fallback mapper will be returned instead.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingOptions">
+            <summary>
+            Represents the configurable options for code mapping.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingOptions.FilterEmptyEdits">
+            <summary>
+            Gets or sets a value indicating whether to filter out empty edits.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.Formatters.CSharpFormatter.FormatTextEditAsync(Microsoft.VisualStudio.Copilot.Internal.TextEdit,Microsoft.VisualStudio.Text.ITextSnapshot,System.Threading.CancellationToken)">
+            <summary>
+            This method does formatting for C# files that are part of a workspace
+            </summary>
+            <param name="textEdit">the TextEdit to format.</param>
+            <param name="snapshot">The text snapshot</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeMappers.Formatters.GenericFormatter">
+            <summary>
+            The GenericFormatter implements the IFormatTextEditProvider interface to provide
+            language-agnostic formatting using VS editor tools.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.Formatters.GenericFormatter.#ctor(Microsoft.VisualStudio.Text.Tagging.IBufferTagAggregatorFactoryService,Microsoft.VisualStudio.Threading.JoinableTaskFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Copilot.CodeMappers.Formatters.GenericFormatter" /> class.
+            </summary>
+            <param name="bufferTagAggregatorFactory">The buffer tag aggregator factory.</param>
+            <param name="jtf">The joinable task factory.</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.Formatters.GenericFormatter.FormatTextEditAsync(Microsoft.VisualStudio.Copilot.Internal.TextEdit,Microsoft.VisualStudio.Text.ITextSnapshot,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.Formatters.GenericFormatter.GetIndentationForLineUsingStructureTagsAsync(Microsoft.VisualStudio.Text.ITextSnapshotLine,System.Threading.CancellationToken)">
+            <summary>
+            Gets the indentation for a specific line using structure tags.
+            </summary>
+            <param name="line">The line to get indentation for.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>The indentation value for the line.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeMappers.ICodeMapperRegistry">
+            <summary>
+            Defines a registry for obtaining language-specific code mappers from a content part or content type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.ICodeMapperRegistry.GetMapper(Microsoft.VisualStudio.Copilot.CopilotContentCodePart)">
+            <summary>
+            Obtains a language-specific code mapper that supports the specified content code part.
+            </summary>
+            <param name="part">The content code part to obtain a code mapper for.</param>
+            <returns>A code mapper that supports the specified content code part, or <c>null</c> if no such mapper can be found.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.ICodeMapperRegistry.GetMapper(Microsoft.VisualStudio.Utilities.IContentType)">
+            <summary>
+            Obtains a language-specific code mapper that supports the specified content type.
+            </summary>
+            <param name="contentType">The content type to obtain a code mapper for.</param>
+            <returns>A code mapper that supports the specified content type, or <c>null</c> if no such mapper can be found.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.ICodeMapperRegistry.GetFallbackMapper">
+            <summary>
+            Obtains a fallback code mapper that should be able to support any type of content type.
+            </summary>
+            <returns>A fallback code mapper that supports the default content type, or <c>null</c> if no such mapper can be found.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeMappers.ICodeMappingManager">
+            <summary>
+            Defines a registry for obtaining language-specific code mappers from a content part or content type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.ICodeMappingManager.GetMappedEditsAsync(Microsoft.VisualStudio.Copilot.Internal.MappingTarget,System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Copilot.CopilotContentCodePart},Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingOptions,System.Threading.CancellationToken)">
+            <summary>
+            This manager handles all heuristics and logic behind mapping implementation for a given target and content.
+            </summary>
+            <param name="target">The mapping target.</param>
+            <param name="contentBlocks">The content blocks from copilot.</param>
+            <param name="mappingOptions"><see cref="T:Microsoft.VisualStudio.Copilot.CodeMappers.CodeMappingOptions" /> Represents the configurable options for the code mapper.</param>
+            <param name="cancellationToken">A cancellation token.</param>
+            <returns>Returns the mapped edits for the given code blocks and the given mapping target.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.TextDifferencing.SourceTextDiffer.RentArray(System.Int32)">
+            <summary>
+             Rents a char array of at least <paramref name="minimumLength" /> from the shared array pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.TextDifferencing.SourceTextDiffer.ReturnArray(System.Char[],System.Boolean)">
+            <summary>
+             Returns a char array to the shared array pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.TextDifferencing.SourceTextDiffer.EnsureBuffer(System.Char[]@,System.Int32)">
+            <summary>
+             Ensures that <paramref name="array" /> references a char array of at least <paramref name="minimumLength" />.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeMappers.TextDifferencing.TextDiffer.IntArray">
+            <summary>
+             This is a simple wrapper for either a single small int array, or
+             an array of int array pages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.TextDifferencing.TextDiffer.IntArray.RentArray(System.Int32)">
+            <summary>
+             Rents an int array of at least <paramref name="minimumLength" /> from the shared array pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeMappers.TextDifferencing.TextDiffer.IntArray.ReturnArray(System.Int32[],System.Boolean)">
+            <summary>
+             Returns an int array to the shared array pool.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CopilotExclusionService">
+            <summary>
+            Service for managing the exclusion of content in Copilot Chat.
+            </summary>
+            <remarks>
+            This service provides methods to check if a file or any file in a solution is excluded.
+            It also provides a method to check the exclusion status for a list of files.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CopilotExclusionService.Moniker">
+            <summary>
+            Gets the service moniker.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CopilotExclusionService.Descriptor">
+            <summary>
+            Gets the service RPC descriptor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CopilotExclusionService.IsFileExcludedAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Checks if a specific file is excluded.
+            </summary>
+            <param name="filePath">The path of the file to check for exclusion.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>A boolean value indicating whether the file is excluded or not.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CopilotExclusionService.IsAnyFileExcludedAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Checks if any file in the provided workspace is excluded.
+            </summary>
+            <param name="workspacePath">The path of the workspace to check for excluded files.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>A boolean value indicating whether any file is excluded.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CopilotExclusionService.CheckFilesExclusionStatusAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Checks the exclusion status for a list of files.
+            </summary>
+            <param name="filesNames">A list of file names to check for exclusion.</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns>A dictionary where the key is the file name and the value is a boolean indicating whether the file is excluded.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ExtensionMethods.AtMost``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Check whether the enumerable has at most <paramref name="count" /> elements.
+            </summary>
+            <typeparam name="TElement">The type of element in the enumerable.</typeparam>
+            <param name="self">The enumerable to check.</param>
+            <param name="count">How many elements the enumerable should have or less.</param>
+            <returns><see langword="true" /> if <paramref name="self" /> has <paramref name="count" /> or less elements, <see langword="false" /> otherwise.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.ICopilotEnvironment">
+            <summary>
+            Represents the environment of the <see cref="T:Microsoft.VisualStudio.Copilot.ICopilotSessionProvider" />
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ICopilotEnvironment.OpenOutputPaneAsync(System.Threading.CancellationToken)">
+            <summary>
+            Opens the Conversations output pane.
+            </summary>
+            <param name="cancellation">The cancellation token.</param>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.ICopilotRequestOrchestrator">
+            <summary>
+            The request orchestrator takes in a request from a <see cref="T:Microsoft.VisualStudio.Copilot.ICopilotSession" /> and determines how to distribute it to any responders and how to compute the final response(s).
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.ICopilotSessionProvider">
+            <summary>
+            Represents the top level provider for an interactive model.
+            </summary>
+            <remarks>
+            The VS user interface won't support multiple providers, so if more than one export is found,
+            it will use the first one. If no provider is found, the user interface will be disabled.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ICopilotSessionProvider.IsEnabled">
+            <summary>
+            Indicates whether the provider is enabled and can create sessions.
+            </summary>
+            <remarks>
+            If the provider is not enabled, VS will disable related commands.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ICopilotSessionProvider.Environment">
+            <summary>
+            Gets the environment fo the  provider.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ICopilotSessionProvider.CreateSessionAsync(Microsoft.VisualStudio.Copilot.CopilotSessionOptions,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new copilot session.
+            </summary>
+            <exception cref="T:System.UnauthorizedAccessException" />
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.IFileViewProvider">
+            <summary>
+            Helper interface that will provide utilities to handle transition from file paths into
+            WPF Text views on visual studio.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.IFileViewProvider.CreateTransientFileForRefinement(System.String,System.String,System.Guid)">
+            <summary>
+            Provides a WPF transient file view that should allow the user to save it to disk and on a selected folder.
+            </summary>
+            <param name="filePath">The intended target path for the transient file.</param>
+            <param name="language">The language the file will be written in.</param>
+            <param name="transientFileId">An id to identify the transient file on telemetry..</param>
+            <returns>The WPF text view for the file.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.IFileViewProvider.GetExistingFileForRefinement(System.String)">
+            <summary>
+            Opens an existing file for refinement in the editor.
+            If the file doesn't exist it will return null.
+            </summary>
+            <param name="filePath">The path of the file to open</param>
+            <returns>The editor's view of the opened file, or null when the file couldn't be found.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.IGlobalTypeProvider">
+            <summary>
+            An interface exported via MEF that indicates the aggregating type provider for the host.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.IInternalBugUrlBuilder.Build">
+            <summary>
+            Builds a url that when opened, will show a partially filled out bug template,
+            containing details like the current extension version, session, VS version,
+            as well as the absolute path to this session's log file so that it can be
+            attached easily.
+            </summary>
+            <returns>A url if the user is internal, otherwise null.</returns>
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.IInternalCopilotInteractionService.RegistrationsChanged">
+            <summary>
+            Raised when the scope or context provider registrations have changed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.Indentation">
+            <summary>
+            Provides a set of static methods for adjusting the indentation of code strings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.Indentation.AdjustIndentation(System.String,System.Int32)">
+            <summary>
+            Adjusts the indentation of the given code string to match the specified target indentation string.
+            This allows us to Add or Remove indentation characters to adapt the suggested code to be part of the target code.
+            </summary>
+            <param name="code">The code string to adjust.</param>
+            <param name="targetBaseIndentation">The target indentation string to match.</param>
+            <returns>The adjusted code string.</returns>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.InputSymbols.punctuation">
+            <summary>
+            These symbols are treated as punctuation so they will be escaped and end the parsing of a reference.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.InteractionExtensions.GetAgentMentions(Microsoft.VisualStudio.Copilot.CopilotRequest)">
+            <summary>
+            Gets the names of agents mentioned in the agent syntax (@agent), trimmed and lower string.
+            </summary>
+            <param name="self">The request to inspect for mentions.</param>
+            <returns>The trimmed/lowered name (first input) of any agent mention.</returns>
+            <remarks>
+            These are only the names present in mentions which means they do not necessarily resolve to a real agent.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.InternalThreadOptions.Responder">
+            <summary>
+            Gets the responder for the thread.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.InternalThreadOptions.CreationParameters">
+            <summary>
+            Gets the creation parameters for the thread.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.InternalThreadOptions.ShowOnCreation">
+            <summary>
+            Gets a value indicating whether the thread should be shown to the user when it is created. Defaults to true.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.ISemanticContextProvider">
+            <summary>
+            Interface for interacting with the semantic context brokered service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ISemanticContextProvider.GetSemanticContextAsync(Microsoft.VisualStudio.Copilot.DocumentContext,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves relevant skeleton code context for a document.
+            </summary>
+            <param name="documentContext">document context.</param>
+            <param name="cancellationToken">cancellation token.</param>
+            <returns>Skeleton code ranges.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ISemanticContextProvider.ReduceContentAsync(System.Collections.Generic.IReadOnlyList{Conversations.Abstractions.Symbols.SymbolRange},System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Reduces a collection of skeleton code ranges based off a given token limit.
+            </summary>
+            <param name="ranges">skeleton code ranges</param>
+            <param name="tokenLimit">token limit to fit</param>
+            <param name="cancellationToken">cancellation token.</param>
+            <returns>reduced skeleton code range.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ISemanticContextProvider.PromptifyAsync(Conversations.Abstractions.Symbols.SymbolRange,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Promptifies the skeleton code range into a string.
+            </summary>
+            <param name="symbol">skeleton code ranges</param>
+            <param name="tokenLimit">token limit to fit</param>
+            <param name="cancellationToken">cancellation token.</param>
+            <returns>reduced skeleton code range.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ISymbolProvider.GetSnippetAsync(Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult,System.Threading.CancellationToken)">
+            <summary>
+            Gets the context snippet for the given symbol result.
+            </summary>
+            <param name="item">The symbol result.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>The context snippet.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ISymbolProvider.SearchAsync(System.String,System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Searches for symbols that match the given query and kind filter.
+            </summary>
+            <param name="query">The query to search for.</param>
+            <param name="kindFilter">The kind filter to apply. Possible values are "Class", "Delegate", "Enum", "Interface", "Struct", "Method", "Property", "Field", "Event", "Constructor", "Destructor", "Operator", "ConversionOperator", "Indexer", "Attribute", "Module", "Namespace", "Parameter", "TypeParameter", "Local", "RangeVariable", "Label", "Alias", "Constant", "EnumMember", "ErrorType", "Discard", "Unknown".</param>
+            <param name="onlyExactMatch">Return only results that exact match.</param>
+            <param name="onlyCurrentDocument">Search only in the current document.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>An enumerable of symbol results.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult">
+            <summary>
+            Represents a symbol result.
+            </summary>
+            <param name="Name">The name of the symbol.</param>
+            <param name="Kind">The kind of the symbol.</param>
+            <param name="Description">The description of the symbol.</param>
+            <param name="AdditionalInformation">Additional information about the symbol.</param>
+            <param name="SymbolIdentification">The identification of the symbol.</param>
+            <param name="Icon">The icon associated with the symbol.</param>
+            <param name="Language">The Language of the icon associated with the symbol.</param>
+            <param name="FilePath">The FilePath where to find the symbol.</param>
+            <param name="Line">The line where to find the symbol.</param>
+            <param name="Project">The Project where to find the symbol.</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.#ctor(System.String,Microsoft.VisualStudio.Copilot.SymbolContext.SymbolKind,System.String,System.String,System.String,System.Nullable{Microsoft.VisualStudio.Copilot.CopilotImageMoniker},System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Represents a symbol result.
+            </summary>
+            <param name="Name">The name of the symbol.</param>
+            <param name="Kind">The kind of the symbol.</param>
+            <param name="Description">The description of the symbol.</param>
+            <param name="AdditionalInformation">Additional information about the symbol.</param>
+            <param name="SymbolIdentification">The identification of the symbol.</param>
+            <param name="Icon">The icon associated with the symbol.</param>
+            <param name="Language">The Language of the icon associated with the symbol.</param>
+            <param name="FilePath">The FilePath where to find the symbol.</param>
+            <param name="Line">The line where to find the symbol.</param>
+            <param name="Project">The Project where to find the symbol.</param>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.Name">
+            <summary>The name of the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.Kind">
+            <summary>The kind of the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.Description">
+            <summary>The description of the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.AdditionalInformation">
+            <summary>Additional information about the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.SymbolIdentification">
+            <summary>The identification of the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.Icon">
+            <summary>The icon associated with the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.Language">
+            <summary>The Language of the icon associated with the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.FilePath">
+            <summary>The FilePath where to find the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.Line">
+            <summary>The line where to find the symbol.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.ISymbolProvider.SymbolResult.Project">
+            <summary>The Project where to find the symbol.</summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.ServiceBrokerRetryExtensions.DefaultServiceAvailabilityWaitTimes">
+            <summary>
+            Default timeouts for GetServiceProxyWithRetriesAsync if not specified.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.ServiceBrokerRetryExtensions.DefaultWaitBetweenAttemptsOnException">
+            <summary>
+            Default wait between attempts that threw an exception for GetServiceProxyWithRetriesAsync if not specified.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.ServiceBrokerRetryExtensions.GetServiceProxyWithRetriesAsync``1(Microsoft.ServiceHub.Framework.IServiceBroker,Microsoft.ServiceHub.Framework.ServiceRpcDescriptor,System.Threading.CancellationToken,System.Nullable{Microsoft.ServiceHub.Framework.ServiceActivationOptions},System.Int32,System.Collections.Generic.IReadOnlyList{System.TimeSpan},System.Nullable{System.TimeSpan},System.Nullable{Microsoft.VisualStudio.Telemetry.TelemetryEventCorrelation},System.Action{System.String,System.Boolean})">
+            <summary>
+            Obtain a proxy from the service broker with retries and waiting for the service proxy to become available. The caller is responsible for appropriately handling the lifetime of the returned proxy.
+            This should mainly be used in locations where obtaining a service's proxy is critical to functionality over the lifetime of the extension, and impacts more than a single operation.
+            Avoid needing this if possible. It sends one telemetry scope per retry, which will be a lot of noise if called frequently.
+            </summary>
+            <param name="serviceBroker">Service broker to use.</param>
+            <param name="descriptor">Descriptor of the service to get a proxy for.</param>
+            <param name="cancellationToken">Cancellation for the entire operation.</param>
+            <param name="serviceActivationOptions">Options to use when activating the service.</param>
+            <param name="maxNumAttempts">How many attempts to make if an exception is thrown or delayed activation times out.</param>
+            <param name="serviceAvailabilityWaitTimes">How long to wait on each attempt for the service to become available.</param>
+            <param name="waitBetweenAttemptsOnException">How long to wait between attempts if an exception is thrown.</param>
+            <param name="correlation">Parent telemetry event to correlate with.</param>
+            <param name="logCallback">Callback for logging messages. If the boolean is true, the message is for an error. Otherwise it is verbose.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if a proxy could not be obtained.</exception>
+            <returns>The requested service proxy.</returns>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.TestRunnerHelpers.ScopeRunsInConsoleRunner">
+            <summary>
+            A contract name to use on an export on an already MEF-exported scope brokered service to indicate that it should be auto-loaded into the console test runner.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.TestRunnerHelpers.ContextProviderRunsInConsoleRunner">
+            <summary>
+            A contract name to use on an export on an already MEF-exported context provider brokered service to indicate that it should be auto-loaded into the console test runner.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.Tracing.ICopilotExtensionTraceSource">
+            <summary>
+            A TraceSource that may be exported by a core extension implementation.
+            Today, this is exported by the VS Copilot chat extension and is
+            used for writing trace messages to an output window pane and log file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.Tracing.TraceSourceExtensions">
+            <summary>
+            Convenience methods for TraceSource.TraceEvent().
+            </summary>
+            <remarks>
+            Methods that take format arguments or (dollar-prefixed) interpolated strings
+            delay the formatting of arguments until the trace event is actually consumed
+            by a trace listener (assuming it's not ignored by a trace filter).
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.Tracing.TraceSourceExtensions.WithName(System.Diagnostics.TraceSource,System.String)">
+            <summary>
+            Creates a new TraceSource with listeners and switch copied from the
+            existing TraceSource.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.Tracing.TraceSourceExtensions.ListensFor(System.Diagnostics.TraceSource,System.Diagnostics.TraceEventType)">
+            <summary>
+            Returns true if there is at least one listener that will consume this
+            trace event type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.Tracing.TraceSourceExtensions.NonFormattableString">
+             <summary>
+             Work around an overload resolution problem with `FormattableString`, enabling
+             interpolated string to be used with tracing efficiently while also supporting
+             plain strings.
+             </summary>
+             <remarks>
+             See <a href="https://stackoverflow.com/questions/35770713/overloaded-string-methods-with-string-interpolation">
+             Overloaded string methods with string interpolation</a>.
+            
+             An extra implicit conversion causes the compiler to prefer the overloads that take
+             `FormattableString` when interpolated strings are used with the tracing methods. While
+             plain `string` parameters get converted to/from this struct, the conversions should
+             basically evaporate in inlining.
+             </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.SharedStringExtensions.IsLineBreak(System.Char)">
+            <summary>
+            Checks if a character is a line break character.
+            </summary>
+            <param name="character">The input character.</param>
+            <returns>True if the input character is a line break character, else false.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.SharedStringExtensions.GetFirstLine(System.String)">
+            <summary>
+            Gets the text before the first line break.
+            </summary>
+            <param name="text">The input string.</param>
+            <returns>The first line of text.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.SharedStringExtensions.GetLineBreakText(System.String)">
+            <summary>
+            Determines the line break character of the input string.
+            </summary>
+            <param name="text">The input string.</param>
+            <returns>The line break character of the input string.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.SharedStringExtensions.NormalizeLineBreaks(System.String,Microsoft.VisualStudio.Text.ITextSnapshot,System.String@)">
+            <summary>
+            Normalizes the line breaks of a given original string by replacing the line break text with the target line break text.
+            </summary>
+            <param name="original">The original string to be normalized.</param>
+            <param name="snapshot">The text snapshot to use for obtaining the target line break text.</param>
+            <param name="targetLineBreak">The target line break text to use for normalization.</param>
+            <returns>The normalized string.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Conversations.IDEContext.FilePathConverter">
+            <summary>
+            File path converter handles converting between absolute and relative paths.
+            This is required in order to send relative paths to the model, and then
+            convert them back and compare against the current workspace.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.IDEContext.DiagnosticContextProvider.ErrorMember">
+            <summary>
+            Used for a specific error.
+            ex:
+                - #error:CS1503:'Argument 1: cannot convert from 'int' to 'string'':'FilePath.cs':10
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.ParseAndValidateInputs(System.Collections.Generic.IReadOnlyList{System.String})">
+            <summary>
+            Parse and validate method for <see cref="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.QueryMentionAsync(Microsoft.VisualStudio.Copilot.CopilotMentionQuery,System.Threading.CancellationToken)" />
+            </summary>
+            <remarks>This method is called by QueryContextAsync, which is called frequently when the user types in the Copilot Chat prompt window after a context trigger char,
+            so we should pay close attention to performance here. In the future, we may want to introduce caching, ideally in the ViewModel
+            for the results of all context providers
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.GetActiveFileQueryContextAsync(System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyDictionary{System.String,System.String}},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Gets queried context objects for the active file and, if no other selection has been passed in, the highlighted selection
+            </summary>
+            <remarks>This method is called by QueryContextAsync, which is called frequently when the user types in the Copilot Chat prompt window after a context trigger char,
+            so we should pay close attention to performance here. In the future, we may want to introduce caching, ideally in the ViewModel
+            for the results of all context providers
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.GetOpenFileQueriedContextAsync(System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyDictionary{System.String,System.String}},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Gets queried context objects for all open files
+            </summary>
+            <remarks>This method is called by QueryContextAsync, which is called frequently when the user types in the Copilot Chat prompt window after a context trigger char,
+            so we should pay close attention to performance here. In the future, we may want to introduce caching, ideally in the ViewModel
+            for the results of all context providers
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.GetUniquePaths(System.Collections.Generic.IReadOnlyList{Microsoft.VisualStudio.Copilot.IdeFile})">
+            <summary>
+            Gets a mapping between full paths and the shortest, unique name for them
+            EX: if we have C:/Folder1/Program.cs and C:/Folder2/Program.cs, the shortest unique paths are Folder1/Program.cs and Folder2/Program.cs respectively
+            </summary>
+            <remarks>This method is called by QueryContextAsync, which is called frequently when the user types in the Copilot Chat prompt window after a context trigger char,
+            so we should pay close attention to performance here. In the future, we may want to introduce caching, ideally in the ViewModel
+            for the results of all context providers
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.ParseAndValidateInputs(System.Collections.Generic.IReadOnlyDictionary{System.String,Microsoft.VisualStudio.Copilot.CopilotValue})">
+            <summary>
+            Parse and validate method for <see cref="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.GetContextAsync(Microsoft.VisualStudio.Copilot.CopilotCorrelationId,System.String,System.Collections.Generic.IReadOnlyDictionary{System.String,Microsoft.VisualStudio.Copilot.CopilotValue},System.Threading.CancellationToken)" />
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.DocumentContextProvider.GetDocumentContext(Microsoft.VisualStudio.Conversations.UI.ViewFocusState)">
+            <summary>
+            Gets a DocumentContext, including the current explicit or implicit selection if it exists.
+            </summary>
+            <remarks>
+            This method will always get the implicit selection if there is one.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Conversations.IDEContext.IWorkspaceDataProvider">
+            <summary>
+            Provides methods for performing queries related to project systems within the workspace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.IWorkspaceDataProvider.IsInOpenFolderModeAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets a value indicating whether the solution is in open folder mode.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result is <c>true</c> if solution
+            is opened via folder; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.IWorkspaceDataProvider.GetWorkspacePathAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets the path of the workspace.
+            </summary>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the path of the workspace regardless of
+            how the solution is opened (via folder or .sln).
+            </returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.IDEContext.IWorkspaceDataProvider.IsFileInWorkspaceAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously checks whether a file is present in the workspace regardless of how the solution is opened (via folder or .sln).
+            </summary>
+            <param name="filePath">The path of the file to check.</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>
+            A task representing the asynchronous operation. The task result is <c>true</c> if the file
+            is in the workspace; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.IDEContext.IWorkspacePathProvider.WorkspacePath">
+            <summary>
+            Gets the containing folder of the .sln file, or the folder name of the open folder when
+            no solution is loaded but a folder is opened.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Conversations.Indexing.CSharpCodeChunkSource">
+            <summary>
+            Chunk source for a C# solution. Used for workspace indexing.
+            </summary>
+            <see cref="T:Microsoft.VisualStudio.Copilot.UnstableInternalApi.Indexing.ICopilotIndexService" />
+        </member>
+        <member name="F:Microsoft.VisualStudio.Conversations.Indexing.CSharpCodeChunkSource.IndexIgnoreFileName">
+            <summary>
+            Name of a file that, if present in a solution, will provide ignore patterns to chunk sources.
+            Lines that start with "# " will be ignored.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Conversations.Indexing.LazyDictionary`2">
+            <summary>
+            Dictionary that creates values on demand using a predefined factory.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Conversations.UI.ViewFocusState">
+            <summary>
+            Represents the state of the current document, including the caret position, explicit selection, and implicit selection.
+            </summary>
+            <param name="DocumentPath">Path to the current document.</param>
+            <param name="ContentType">Type of content.</param>
+            <param name="Caret">Caret position in the current document.</param>
+            <param name="Selection">Explicitly highlighted selection in the current document. Empty if there is none.</param>
+            <param name="Scope">Implicitly highlighted selection in the document. If there is an explicit selection, Scope and Selection are approximately equal.</param>
+            <see cref="T:Microsoft.VisualStudio.Conversations.UI.IFocusTracker" />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.UI.ViewFocusState.#ctor(System.String,Microsoft.VisualStudio.Utilities.IContentType,Microsoft.VisualStudio.Text.SnapshotPoint,Microsoft.VisualStudio.Text.SnapshotSpan,Microsoft.VisualStudio.Text.SnapshotSpan)">
+            <summary>
+            Represents the state of the current document, including the caret position, explicit selection, and implicit selection.
+            </summary>
+            <param name="DocumentPath">Path to the current document.</param>
+            <param name="ContentType">Type of content.</param>
+            <param name="Caret">Caret position in the current document.</param>
+            <param name="Selection">Explicitly highlighted selection in the current document. Empty if there is none.</param>
+            <param name="Scope">Implicitly highlighted selection in the document. If there is an explicit selection, Scope and Selection are approximately equal.</param>
+            <see cref="T:Microsoft.VisualStudio.Conversations.UI.IFocusTracker" />
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.UI.ViewFocusState.DocumentPath">
+            <summary>Path to the current document.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.UI.ViewFocusState.ContentType">
+            <summary>Type of content.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.UI.ViewFocusState.Caret">
+            <summary>Caret position in the current document.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.UI.ViewFocusState.Selection">
+            <summary>Explicitly highlighted selection in the current document. Empty if there is none.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.UI.ViewFocusState.Scope">
+            <summary>Implicitly highlighted selection in the document. If there is an explicit selection, Scope and Selection are approximately equal.</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Conversations.LazyTypeProvider">
+            <summary>
+            A wrapper for ICopilotTypeProviders imported via MEF intended to marshaled across RPC.
+            </summary>
+            <remarks>
+            This wrapper ensures lazy initialization of type providers.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Conversations.LazyTypeProvider.TypeNames">
+            <summary>
+            Gets the type names supported.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.LazyTypeProvider.PromptifyAsync(Microsoft.VisualStudio.Copilot.CopilotValue,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Conversations.LazyTypeProvider.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+    </members>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><DigestValue>jBGQETN0xaSDlPHBzQ+LeFK+/BJPH68TwSmFpnRkKgM=</DigestValue></Reference></SignedInfo><SignatureValue>Y25LJHLDoVUzTm84OTX0nUCbPxkGXvM5cRTu4ReQjeu7q9D7noMl707KtzYl9PP6OuKHHZsDCmIqBagE2k/x1bh0IYA5tTy8z1istaWIssxK3Qi9fyLo0lUpIu4qLQ+BP2W/PcsBx/Wxtp73vWI6FnDmeRQjT+EuRzy4Tkr3OwMBa6MAyaaFmSScoHdei0QHARdK43zcBGOs8dw5KAeSzUcR/xXsivmkhVOXEMRseM6dCVw5psXPTDVp3uIEjte906xrwRwH3lFGgKkTr7KdMmXNgNI1/ZSsg2ezFl3KxHQSHFmXA5rR+TqhnxwBDv5IsB915EyJeCOZa5ntT+E22Q==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>zkvLNa2un9GBrYNDoRGkGv7d0PqtTBB4ViYakFbjuWpmF0KcvDAzzaCWJPhVgIXjz+S8cHEoHuWnp/n+UOljT3ehA8Rs6Lb1aTYub3tB/e0txewv2sQ3yscjYdtTBtFvEm9L8Yv76K3Cxzi/Yvrdg+sr7w8y5RHn1Am0Ff8xggY1xpWCXFI+kQM18njQDcUqSlwBnexYfqHBhzz6YXA/S0EziYBu2O2mM7R6gSyYkEOHgIGTVOGnOvvC5xBgC4KNcnQuQSRLiUI2CmzU8vefR6ykruyzt1rNMPI8OqWHQtSDKXU5JNqbk4GNjwzcwbSzOHrxuxWHq91l/vLdVDGDUw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate><X509Certificate>MIIF7TCCA9WgAwIBAgIQP4vItfyfspZDtWnWbELhRDANBgkqhkiG9w0BAQsFADCBiDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjEyMDAGA1UEAxMpTWljcm9zb2Z0IFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IDIwMTEwHhcNMTEwMzIyMjIwNTI4WhcNMzYwMzIyMjIxMzA0WjCBiDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjEyMDAGA1UEAxMpTWljcm9zb2Z0IFJvb3QgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IDIwMTEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCygEGqNThNE3IyaCJNuLLx/9VSvGzH9dJKjDbu0cJcfoyKrq8TKG/Ac+M6ztAlqFo6be+ouFmrEyNozQwph9FvgFyPRH9dkAFSWKxRxV8qh9zc2AodwQO5e7BW6KPeZGHCnvjzfLnsDbVU/ky2ZU+I8JxImQxCCwl8MVkXeQZ4KI2JOkwDJb5xalwL54RgpJki49KvhKSn+9GY7Qyp3pSJ4Q6g3MDOmT3qCFK7VnnkH4S6Hri0xElcTzFLh93dBWcmmYDgcRGjuKVB4qRTufcyKYMME782XgSzS0NHL2vikR7TmE/dQgfI6B0S/Jmpaz6SfsjWaTr8ZL22CZ3K/QwLopt3YEsDlKQwaRLWQi3BQUzK3Kr9j1uDRprZ/LHR47PJf0h6zSTwQY9cdNCssBAgBkm3xy0hyFfj0IbzA2j70M5xwYmZSmQBbP3sMJHPQTySx+W6hh1hhMdfgzlirrSSL0fzC/hV66AfWdC7dJse0Hbm8ukG1xDo+mTeacY1logC8Ea4PyeZb8txiSk190gWAjWP1Xl8TQLPX+uKg09FcYj5qQ1OcunCnAfPSRtOBA5jUYxe2ADBVSy2xuDCZU7JNDn1nLPEfuhhbhNfFcRf2X7tHc7uROzLLoax7Dj2cO2rXBPB2Q8Nx4CyVe0096yb5MPa50c8prWPMd/FS6/r8QIDAQABo1EwTzALBgNVHQ8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUci06AjGQQ7kUBU7h6qfHMdEjiTQwEAYJKwYBBAGCNxUBBAMCAQAwDQYJKoZIhvcNAQELBQADggIBAH9yzw+3xRXbm8BJyiZb/p4T5tPw0tuXX/JLP02zrhmu7deXoKzvqTqjwkGw5biRnhOBJAPmCf0/V0A5ISRW0RAvS0CpNoZLtFNXmvvxfomPEf4YbFGq6O0JlbXlccmh6Yd1phV/yX43VF50k8XDZ8wNT2uoFwxtCJJ+i92Bqi1wIcM9BhS7vyRep4TXPw8hIr1LAAbblxzYXtTFC1yHblCk6MM4pPvLLMWSZpuFXst6bJN8gClYW1e1QGm6CHmmZGIVnYeWRbVmIyADixxzoNOieTPgUFmG2y/lAiXqcyqfABTINseSO+lOAOzYVgm5M0kS0lQLAausR7aRKX1MtHWAUgHoyoL2n8ysnI8X6i8msKtyrAv+nlEex0NVZ09Rs1fWtuzuUrc66U7h14GIvE+OdbtLqPA1qibUZ2dJsnBMO5PcHd94kIZysjik0dySTclY6ysSXNQ7roxrsIPlAT/4CTL2kzU0Iq/dNw13CYArzUgA8YyZGUcFAenRv9FO0OYoQzeZpApKCNmacXPSqs0xE2N2oTdvkjgefRI8ZjLny23h/FKJ3crWZgWalmG+oijHHKOnNlA8OqTfSm7mhzvO6/DggTedEzxSjr25HTTGHdUKaj2YKXCMiSrRq4IQSB/c9O+lxbtVGjhjhE63bK2VVOxlIhBJF7jAHscPrFRH</X509Certificate></X509Data></KeyInfo><Object Id="ts-countersig"><X509Data><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate></X509Data><CounterSignature ts-format="cms-timestamp-message" xmlns="http://schemas.microsoft.com/xmldsig/timestamp/2003">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</CounterSignature></Object></Signature></doc>

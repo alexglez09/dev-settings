@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="JetBrains.ReSharperPlatformVs17" Version="233.0.20231219" Language="en-US" Publisher="JetBrains" />
+    <DisplayName>JetBrains ReSharper 2023.3.2</DisplayName>
+    <Description>A productivity extension for Visual Studio 2022</Description>
+    <MoreInfo>https://www.jetbrains.com</MoreInfo>
+  </Metadata>
+  <Installation InstalledByMsi="true" SystemComponent="false">
+    <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,18.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Ultimate" Version="[17.0,18.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Premium" Version="[17.0,18.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,18.0)" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)" />
+  </Installation>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="C:\Users\alex.gonzalez\AppData\Local\Microsoft\VisualStudio\17.0_650ef552\Extensions\JetBrains\ReSharperPlatformVs17\vspackage.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.DPA.Ide.VS.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.Platform.VisualStudio.SinceVs10.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.Platform.VisualStudio.SinceVs12.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.Platform.VisualStudio.SinceVs14RoslynAware.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.Platform.VisualStudio.SinceVs15.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.PsiFeatures.VisualStudio.Debugger.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.PsiFeatures.VisualStudio.SinceVs10.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.PsiFeatures.VisualStudio.SinceVs14.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.PsiFeatures.VisualStudio.SinceVs16.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="C:\Users\alex.gonzalez\AppData\Local\JetBrains\Installations\ReSharperPlatformVs17_650ef552_001\JetBrains.ReSharperPlatformVs17.VisualStudio.v17.0.Package.dll" />
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+</PackageManifest>

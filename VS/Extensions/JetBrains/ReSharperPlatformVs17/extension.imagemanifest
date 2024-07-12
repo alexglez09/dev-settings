@@ -1,0 +1,1134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImageManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/VisualStudio/ImageManifestSchema/2014">
+  <Symbols>
+    <String Name="Resources" Value="JetBrains.ReSharperPlatformVs17.VisualStudio.v17.0.Package;Component/resources/xaml"></String>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAddMissing__AddMissingGuid" Value="{252a201b-d33b-49e4-8e56-d74f55463ad4}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAddMissing__AddMissingID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCreate__CreateGuid" Value="{e2fe0a4d-5602-4307-80b8-508d4dc18379}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCreate__CreateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsMoveLiveTemplate__MoveLiveTemplateGuid" Value="{be6fac92-acf8-4b30-b66b-d8ea941a9f74}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsMoveLiveTemplate__MoveLiveTemplateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysis__SolutionAnalysisGuid" Value="{136513a5-7396-42fd-8848-d62ad0bab77a}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysis__SolutionAnalysisID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindDependentCode__FindDependentCodeGuid" Value="{e3402a70-ce21-4e30-a28a-52169baaed5a}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindDependentCode__FindDependentCodeID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveSelectedReference__RemoveSelectedReferenceGuid" Value="{a5923d55-b38f-408f-a2f2-a7029e237903}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveSelectedReference__RemoveSelectedReferenceID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveAllUnusedReferences__RemoveAllUnusedReferencesGuid" Value="{6a70c68e-1302-4c3d-b545-6df6d2ff0612}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveAllUnusedReferences__RemoveAllUnusedReferencesID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRefresh__RefreshGuid" Value="{c9ca20db-5361-4c56-b2e9-ca49fd331631}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRefresh__RefreshID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsAppendSession__AppendSessionGuid" Value="{d7764745-4a28-4e8e-967a-2a44e646efa5}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsAppendSession__AppendSessionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneGenerate__FuncZoneGenerateGuid" Value="{2a3cd2ac-0925-4e26-b337-7d372aafed9b}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneGenerate__FuncZoneGenerateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAddFolder__AddFolderGuid" Value="{bdadcc53-dc89-4eb8-9638-b619ddf05891}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAddFolder__AddFolderID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyAdd__AssemblyAddGuid" Value="{b4207c59-270f-4a1f-98fe-5dde26a784d1}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyAdd__AssemblyAddID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesLocalHistoryThemedIconsDiff__DiffGuid" Value="{e263aa7d-36f4-42d8-b215-b4a40ba4cfa9}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesLocalHistoryThemedIconsDiff__DiffID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProjectGeneration__ProjectGenerationGuid" Value="{20820ce1-3652-43b6-bcac-f8a672273d22}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProjectGeneration__ProjectGenerationID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRemove__RemoveGuid" Value="{43432045-d95a-4197-b50d-5359fdda78e1}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRemove__RemoveID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsScrollToBottom__ScrollToBottomGuid" Value="{edae00df-cec0-4cde-a2f1-3dd5e79a99ad}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsScrollToBottom__ScrollToBottomID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsBase__BaseGuid" Value="{9edb13f8-4c98-4269-b632-3ddcc8f4d10e}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsBase__BaseID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsUIThemedIconsVsDebuggerThemedIconsBreakpointEnabled__BreakpointEnabledGuid" Value="{de121dee-b177-4619-a777-2bbafac0ce4a}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsUIThemedIconsVsDebuggerThemedIconsBreakpointEnabled__BreakpointEnabledID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsIgnore__IgnoreGuid" Value="{8b3f90d9-2b3b-45e9-82e9-515534b4b144}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsIgnore__IgnoreID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsTypeHierarchyToolWindow__TypeHierarchyToolWindowGuid" Value="{b1b2e863-253e-4d78-aabf-3df91dc50746}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsTypeHierarchyToolWindow__TypeHierarchyToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuild__SolBuilderDuoBuildGuid" Value="{8285a202-241b-4693-927b-4cdd28b2369f}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuild__SolBuilderDuoBuildID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAbort__AbortGuid" Value="{4b4d2b45-d7eb-43f5-a371-b936bf87d1f2}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAbort__AbortID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagUnchecked__FlagUncheckedGuid" Value="{44ce675c-ee70-4ae6-ab08-aee3b80752c5}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagUnchecked__FlagUncheckedID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagChecked__FlagCheckedGuid" Value="{be0904a1-b022-4859-924a-7f19cf58fb9e}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagChecked__FlagCheckedID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsUpdates__UpdatesGuid" Value="{c2d164cb-db76-4818-9e13-63b10311c022}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsUpdates__UpdatesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSubtypes__SubtypesGuid" Value="{42c03d89-a025-41ea-be06-9c6be3c61b67}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSubtypes__SubtypesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesResxJetBrainsReSharperFeatureServicesResxResourcesServices118nThemedIconsLocalization__LocalizationGuid" Value="{a001d772-b069-4ec5-9733-0e73123c0ffe}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesResxJetBrainsReSharperFeatureServicesResxResourcesServices118nThemedIconsLocalization__LocalizationID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoClean__SolBuilderDuoCleanGuid" Value="{917c8ee3-5f84-4c19-867c-fac86bd46dad}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoClean__SolBuilderDuoCleanID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceClear__WorkspaceClearGuid" Value="{53f42988-e3ac-49e2-9d78-8d2b895f43dc}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceClear__WorkspaceClearID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDuplicate__DuplicateGuid" Value="{dd7c892a-960c-4446-a816-322990760466}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDuplicate__DuplicateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsEnregion__EnregionGuid" Value="{9ada2873-a96d-427f-b8c6-84af00ab584e}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsEnregion__EnregionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsMacro__MacroGuid" Value="{5538f3c4-81ed-445a-98b2-53b728966a5a}"></Guid>
+    <ID Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsMacro__MacroID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncViewToCaret__SyncViewToCaretGuid" Value="{24848857-4dea-4939-a3f4-af11adf972c1}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncViewToCaret__SyncViewToCaretID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncCaretToView__SyncCaretToViewGuid" Value="{91b3bbd4-f22b-4d72-b2d5-1a2ddd9a86bc}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncCaretToView__SyncCaretToViewID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsCollapseGraph__CollapseGraphGuid" Value="{ead14b13-caf4-466d-96aa-ff56798e75eb}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsCollapseGraph__CollapseGraphID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsOptions__OptionsGuid" Value="{2390e725-1a14-4996-81f1-4c1684170004}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsOptions__OptionsID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsAutogeneratedProperty__AutogeneratedPropertyGuid" Value="{f697d7f1-f6f6-43ac-a772-a0243e6594aa}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsAutogeneratedProperty__AutogeneratedPropertyID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsMetricDisplay__MetricDisplayGuid" Value="{fda1cec7-b422-4dd8-9b8d-af8f8cd51376}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsMetricDisplay__MetricDisplayID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsNewFolderLiveTemplate__NewFolderLiveTemplateGuid" Value="{3417716d-f0cd-4549-861c-e59a082eb807}"></Guid>
+    <ID Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsNewFolderLiveTemplate__NewFolderLiveTemplateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsAddLiveTemplate__AddLiveTemplateGuid" Value="{ecef08b4-0c1f-42bf-9a18-1f1aeb846ce4}"></Guid>
+    <ID Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsAddLiveTemplate__AddLiveTemplateID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCopy16x16__Copy16x16Guid" Value="{f7252626-e9a9-4879-acee-28a0f8d6024e}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCopy16x16__Copy16x16ID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAnonymousBookmarkNew__AnonymousBookmarkNewGuid" Value="{34109393-7df7-46ee-a7ef-a2a6a9746f15}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAnonymousBookmarkNew__AnonymousBookmarkNewID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDelete__DeleteGuid" Value="{d6df879b-1c34-4ceb-903c-917beec74377}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDelete__DeleteID" Value="1"></ID>
+    <Guid Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsToolWindowIcon__ToolWindowIconGuid" Value="{d7b2f986-27e5-4d16-b0e2-1d255e1b717e}"></Guid>
+    <ID Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsToolWindowIcon__ToolWindowIconID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsEditLayer__EditLayerGuid" Value="{6f15aa9c-c5e5-4660-ae13-ae97614e87cb}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsEditLayer__EditLayerID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsEditTemplate__EditTemplateGuid" Value="{3600c931-23a8-46c9-8a7e-c87b223722c8}"></Guid>
+    <ID Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsEditTemplate__EditTemplateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiXmlJetBrainsReSharperPsiXmlResourcesPsiXmlThemedIconsXmlNode__XmlNodeGuid" Value="{f3ac1808-d93c-4677-a679-70c4eee98874}"></Guid>
+    <ID Name="JetBrainsReSharperPsiXmlJetBrainsReSharperPsiXmlResourcesPsiXmlThemedIconsXmlNode__XmlNodeID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRight__RightGuid" Value="{bedc517c-09ac-4a92-812e-51bbb769dcf5}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRight__RightID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsExpandGraph__ExpandGraphGuid" Value="{682f74fe-99bf-4e4b-bb23-2fd5892967e9}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsExpandGraph__ExpandGraphID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsStackTraceExplorerToolWindow__StackTraceExplorerToolWindowGuid" Value="{a4a574fc-9150-4646-b054-12ed43166fd1}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsStackTraceExplorerToolWindow__StackTraceExplorerToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExport__ExportGuid" Value="{1d3536cf-be89-46c3-89f3-309c2b751c7a}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExport__ExportID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsExportLayer__ExportLayerGuid" Value="{53f9630b-8fa2-489f-b9de-0db79562cbf2}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsExportLayer__ExportLayerID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportHtml__ExportHtmlGuid" Value="{125795a6-edab-4f88-bc92-707fa1fcade2}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportHtml__ExportHtmlID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportText__ExportTextGuid" Value="{cb032af5-5208-4b6f-9462-9b09b0e3f9c1}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportText__ExportTextID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportXml__ExportXmlGuid" Value="{495723da-fea4-48a4-ac49-bfc87f228daf}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportXml__ExportXmlID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsPlugins__PluginsGuid" Value="{ccdfff96-9780-4fbd-855c-a6b35fb0de97}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsPlugins__PluginsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsExcludeLibraryElement__ExcludeLibraryElementGuid" Value="{0cb7a76a-060b-4f8a-9545-3a60b2a7154f}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsExcludeLibraryElement__ExcludeLibraryElementID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsFilterIssues__FilterIssuesGuid" Value="{3497fd25-5d67-4885-bcbc-869b6c60c3fc}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsFilterIssues__FilterIssuesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindSymbolsExternalToScope__FindSymbolsExternalToScopeGuid" Value="{9f194bd9-abf5-4aa8-8387-e1fcde94c44c}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindSymbolsExternalToScope__FindSymbolsExternalToScopeID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesExternalSourcesThemedIconsSourcesFromSymbolFiles__SourcesFromSymbolFilesGuid" Value="{258860e7-a96b-4a26-b0ce-1b9e5163573f}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesExternalSourcesThemedIconsSourcesFromSymbolFiles__SourcesFromSymbolFilesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsTransitiveEdges__TransitiveEdgesGuid" Value="{e7636183-6cc8-4e70-94f4-2ac5e0dc7630}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsTransitiveEdges__TransitiveEdgesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsIgnoreErrors__IgnoreErrorsGuid" Value="{2fa4e63d-91d5-4ae3-b2e4-998d1de9b3ae}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsIgnoreErrors__IgnoreErrorsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsImplHierarchy__ImplHierarchyGuid" Value="{a9c757ad-3364-4adb-b7d3-f4ef9b70378b}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsImplHierarchy__ImplHierarchyID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportLayer__ImportLayerGuid" Value="{0afe26c5-bdd4-4394-8a0a-7cc1458000fc}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportLayer__ImportLayerID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsImportLiveTemplate__ImportLiveTemplateGuid" Value="{70aca2d4-2462-45ba-93db-f1b1f4b32181}"></Guid>
+    <ID Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsImportLiveTemplate__ImportLiveTemplateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisWarning__SolutionAnalysisWarningGuid" Value="{d677132d-b755-4746-826f-af24052391be}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisWarning__SolutionAnalysisWarningID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneAnalyze__FuncZoneAnalyzeGuid" Value="{468baa80-0cd5-4fb9-83ea-c4037e2ecb9b}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneAnalyze__FuncZoneAnalyzeID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsLeafInterface__LeafInterfaceGuid" Value="{f75844fe-dec4-400a-bb60-28253773b885}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsLeafInterface__LeafInterfaceID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsManageLayers__ManageLayersGuid" Value="{055fc666-8a0c-41a0-a22e-15dc8ba2daf2}"></Guid>
+    <ID Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsManageLayers__ManageLayersID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDown__DownGuid" Value="{e66778d0-313d-428d-9c2e-3877138cb082}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDown__DownID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUp__UpGuid" Value="{4fd33b9b-4190-4649-bec8-aa42e96ab964}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUp__UpID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneNavigate__FuncZoneNavigateGuid" Value="{3214c214-6a49-439f-b997-a5761d34f776}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneNavigate__FuncZoneNavigateID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsNewSession__NewSessionGuid" Value="{09833d49-c036-4697-8cae-d167df2ecfbd}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsNewSession__NewSessionID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsWarning__WarningGuid" Value="{94a2a3fd-55f4-4c5a-b448-7bb30b35c138}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsWarning__WarningID" Value="1"></ID>
+    <Guid Name="JetBrainsPsiFeaturesVisualStudioCoreJetBrainsPsiFeaturesVisualStudioCoreResourcesPsiFeaturesVisualStudioCoreThemedIconsHistory__HistoryGuid" Value="{8784a207-0f3d-4de6-b71f-66298a7639c6}"></Guid>
+    <ID Name="JetBrainsPsiFeaturesVisualStudioCoreJetBrainsPsiFeaturesVisualStudioCoreResourcesPsiFeaturesVisualStudioCoreThemedIconsHistory__HistoryID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsNamingConvention__NamingConventionGuid" Value="{425535c6-d332-44da-a449-46c5d47141d9}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsNamingConvention__NamingConventionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsNamespace__NamespaceGuid" Value="{6359892c-02df-4784-af1d-81794064e102}"></Guid>
+    <ID Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsNamespace__NamespaceID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsClass__ClassGuid" Value="{2fdd53e1-8b5a-4a03-a80e-3488b5384ac5}"></Guid>
+    <ID Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsClass__ClassID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsMergeOccurrencesInFeaturesCommon__MergeOccurrencesInFeaturesCommonGuid" Value="{eb523426-b495-4884-9989-d88f7344f30b}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsMergeOccurrencesInFeaturesCommon__MergeOccurrencesInFeaturesCommonID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsKind__KindGuid" Value="{6357a2ac-3ef2-4e9d-8bbc-0320d66ee4f4}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsKind__KindID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceLoad__WorkspaceLoadGuid" Value="{9c09bb75-c365-4a31-b68f-88436eb0fc33}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceLoad__WorkspaceLoadID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorRead__ErrorReadGuid" Value="{742d92ac-2da6-45ed-898b-7147ab264645}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorRead__ErrorReadID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsModified__ModifiedGuid" Value="{e2a2b36b-3447-4060-a7fc-8e77824ba19c}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsModified__ModifiedID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerOpenFromGac__AssemblyExplorerOpenFromGacGuid" Value="{65b8ee9e-1721-4c56-bfc7-a6732691f3a1}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerOpenFromGac__AssemblyExplorerOpenFromGacID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddNugetPackage__AddNugetPackageGuid" Value="{55e1e575-8714-44e4-994b-eda840b02b48}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddNugetPackage__AddNugetPackageID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddFromNugetCache__AddFromNugetCacheGuid" Value="{2cc70412-43c1-4b47-b826-2c1260df09f4}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddFromNugetCache__AddFromNugetCacheID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddProcess__AddProcessGuid" Value="{ab4a5bd5-3979-4b03-96bc-5eee9d6f7ba6}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddProcess__AddProcessID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsToDoItemsToolWindow__ToDoItemsToolWindowGuid" Value="{7590c5ba-5144-4532-ade8-b5829ac1fa58}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsToDoItemsToolWindow__ToDoItemsToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsFolderOpened__FolderOpenedGuid" Value="{dcf02a50-5afa-4773-b869-5e84dc00e2ca}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsFolderOpened__FolderOpenedID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAnalyzeReferences__AnalyzeReferencesGuid" Value="{3ce642ac-aa4c-4aeb-8840-648e5ca77bc3}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAnalyzeReferences__AnalyzeReferencesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxFile__ResxFileGuid" Value="{12ce1bd5-f818-4f9a-8564-386c25344c82}"></Guid>
+    <ID Name="JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxFile__ResxFileID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSupertypes__SupertypesGuid" Value="{c30b4b25-186a-41a4-a63f-bffba3fc7599}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSupertypes__SupertypesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisPause__SolutionAnalysisPauseGuid" Value="{6d374265-5a19-4343-a35f-6b3eb3ae139a}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisPause__SolutionAnalysisPauseID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsMountLayer__MountLayerGuid" Value="{1d474adf-3e4a-4c40-9eca-62a2c0f2eac6}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsMountLayer__MountLayerID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFindWindow__FindWindowGuid" Value="{bb97bcd3-9857-4c41-9675-4a764d8ddb1a}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFindWindow__FindWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeModule__NativeModuleGuid" Value="{ac5f4c9e-96e4-4bea-9426-c0526252ff86}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeModule__NativeModuleID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeProcess__NativeProcessGuid" Value="{cfdc1655-e037-4efa-9ac1-37fb5bba9cd8}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeProcess__NativeProcessID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClr__ClrGuid" Value="{d95b0066-02ab-48ee-a424-3505c1d35cd9}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClr__ClrID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessHierarchy__ProcessHierarchyGuid" Value="{6cb685ad-e419-4a1e-8173-292d8f60a795}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessHierarchy__ProcessHierarchyID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRunAll__DotMemoryUnitRunAllGuid" Value="{31dd31b7-9aa7-42ce-9800-07c12e30bcb1}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRunAll__DotMemoryUnitRunAllID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRun__DotMemoryUnitRunGuid" Value="{bee866ff-197c-4f9f-bae1-536bb13d49d9}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRun__DotMemoryUnitRunID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDotTraceExecute__DotTraceExecuteGuid" Value="{9b0fea73-b244-4b21-9771-17f11997ff1e}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDotTraceExecute__DotTraceExecuteID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsHierarchy__HierarchyGuid" Value="{df039322-585c-407a-adde-de75af99e8cf}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsHierarchy__HierarchyID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsAssemblies__AssembliesGuid" Value="{0a53b9e7-76f3-478f-93f4-3841246c4452}"></Guid>
+    <ID Name="JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsAssemblies__AssembliesID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDocument__DocumentGuid" Value="{45dbf101-3ca9-4db4-982b-537f4cf63808}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDocument__DocumentID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsSpaces__SpacesGuid" Value="{55f42380-1137-4b3d-a429-6392015d1714}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsSpaces__SpacesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeAllFiles__ReanalyzeAllFilesGuid" Value="{f6266531-1b9f-489d-8b41-03ff73f9854f}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeAllFiles__ReanalyzeAllFilesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeFilesWithErrors__ReanalyzeFilesWithErrorsGuid" Value="{7d092fb4-4367-4bdd-a709-23f8088d6cbb}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeFilesWithErrors__ReanalyzeFilesWithErrorsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuild__SolBuilderDuoRebuildGuid" Value="{79c375e2-8c5f-4672-928d-057b7f2ba867}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuild__SolBuilderDuoRebuildID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRedo__RedoGuid" Value="{dc613643-5573-49d2-9077-5f526b33cb93}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRedo__RedoID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneRefactoring__FuncZoneRefactoringGuid" Value="{ae269390-d85d-4f1e-b4f9-c0f992ef13d3}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneRefactoring__FuncZoneRefactoringID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsRemoveUnusedRefactoring__RemoveUnusedRefactoringGuid" Value="{f38d0efe-b0e8-401a-a11b-bdf9d3e83cdf}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsRemoveUnusedRefactoring__RemoveUnusedRefactoringID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsEdit__EditGuid" Value="{02ada797-6c94-4372-b0bd-389093dca04e}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsEdit__EditID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRerun__RerunGuid" Value="{7fe96480-0252-4650-99da-04afc86db16c}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRerun__RerunID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsResetLayer__ResetLayerGuid" Value="{b0edc3d3-9581-4da5-bafb-37cd8243bbda}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsResetLayer__ResetLayerID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperProductJetBrainsReSharperProductResourcesReSharperUIThemedIconsReSharper16x16__ReSharper16x16Guid" Value="{a4cd6152-f111-4e95-b57f-12be81d19201}"></Guid>
+    <ID Name="JetBrainsReSharperProductJetBrainsReSharperProductResourcesReSharperUIThemedIconsReSharper16x16__ReSharper16x16ID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsInline__InlineGuid" Value="{4d658ecf-1981-4ef3-9dc5-98b8bf669e5f}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsInline__InlineID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMove__MoveGuid" Value="{77be8f91-7ca6-483c-aa45-9b1337cbb7b8}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMove__MoveID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsPaste16x16__Paste16x16Guid" Value="{b95e5f3d-0e0b-41c7-a92c-431701f74c4b}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsPaste16x16__Paste16x16ID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformVisualStudioCoreJetBrainsVsIntegrationResourcesRunConfigThemedIconsRunConfigProject__RunConfigProjectGuid" Value="{76e3f21f-a02b-42ea-a98f-dcfb67b6c1b5}"></Guid>
+    <ID Name="JetBrainsPlatformVisualStudioCoreJetBrainsVsIntegrationResourcesRunConfigThemedIconsRunConfigProject__RunConfigProjectID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsSaveGraph__SaveGraphGuid" Value="{57cb3c71-0b2e-48ec-ab17-5a919788288f}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsSaveGraph__SaveGraphID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceSave__WorkspaceSaveGuid" Value="{e91d7e40-8be1-4a74-9415-9ee8f46e44c8}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceSave__WorkspaceSaveID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSave__SaveGuid" Value="{043ea40f-7dc4-4686-aa8e-cbb3007fe5b8}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSave__SaveID" Value="1"></ID>
+    <Guid Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsThreshold__ThresholdGuid" Value="{2972fc62-a793-423d-bb31-af0ea5472cbe}"></Guid>
+    <ID Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsThreshold__ThresholdID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsGraphDiff__GraphDiffGuid" Value="{85d44a5a-a9c3-40c9-a16e-dda5fc71b790}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsGraphDiff__GraphDiffID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsAggregation__AggregationGuid" Value="{0692aefa-2f11-426f-978c-0b47c915d836}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsAggregation__AggregationID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAIMenus16Dark__AIMenus16DarkGuid" Value="{eb519473-70a3-4ae2-86cc-bc63844b3513}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAIMenus16Dark__AIMenus16DarkID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsUsageAll__UsageAllGuid" Value="{d03d79c2-1341-424c-bfac-6b6ef1e86f92}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsUsageAll__UsageAllID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerToolWindow__AssemblyExplorerToolWindowGuid" Value="{21c77895-24f5-44cb-9681-bd157fbfa144}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerToolWindow__AssemblyExplorerToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageAttribute__UsageAttributeGuid" Value="{28d26216-33b9-4a24-8069-6609de45a18b}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageAttribute__UsageAttributeID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageBase__UsageBaseGuid" Value="{ca562bf9-3451-423b-a5d3-a5e4401858c4}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageBase__UsageBaseID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRun__SolBuilderDuoRunGuid" Value="{5841a4f0-e5cb-4319-9c0c-ae9b7b86bf2e}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRun__SolBuilderDuoRunID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsHourglass__HourglassGuid" Value="{82c1d11a-11e5-441a-99d6-c752ab75de3b}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsHourglass__HourglassID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsFileStructureToolWindow__FileStructureToolWindowGuid" Value="{ee762b60-2b23-4b95-9465-921a8c7398c6}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsFileStructureToolWindow__FileStructureToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxDataComment__ResxDataCommentGuid" Value="{62423ee0-5da6-457b-8ed0-492751105868}"></Guid>
+    <ID Name="JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxDataComment__ResxDataCommentID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsConstructor__ConstructorGuid" Value="{28454a75-d738-4b19-8acf-9f39b79e3276}"></Guid>
+    <ID Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsConstructor__ConstructorID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageDocumentation__UsageDocumentationGuid" Value="{0c1a3f04-7ff4-410f-b45f-38bbf7d81b7c}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageDocumentation__UsageDocumentationID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsProjectPropertiesFile__ProjectPropertiesFileGuid" Value="{476c67a9-5a3a-46f6-ad13-6b81f7692609}"></Guid>
+    <ID Name="JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsProjectPropertiesFile__ProjectPropertiesFileID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisToolWindow__SolutionAnalysisToolWindowGuid" Value="{2509a38e-5f4f-4e0d-a5eb-d0583a5c79c2}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisToolWindow__SolutionAnalysisToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsTypeLayout__TypeLayoutGuid" Value="{0593286f-cf44-418d-a3f4-a94c654da4bb}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsTypeLayout__TypeLayoutID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsFindResultsToolWindow__FindResultsToolWindowGuid" Value="{2e5c9e58-d138-4025-a74e-a6797303fbb8}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsFindResultsToolWindow__FindResultsToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProduce__ProduceGuid" Value="{a085d26e-d1a6-44a0-9be4-8a5821ce60e5}"></Guid>
+    <ID Name="JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProduce__ProduceID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsQuestion__QuestionGuid" Value="{09efdeac-214f-45e1-b738-b688feb3e0da}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsQuestion__QuestionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsShowIgnoredErrors__ShowIgnoredErrorsGuid" Value="{f2ec6c6a-9cfd-4d5a-848b-4747e6727194}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsShowIgnoredErrors__ShowIgnoredErrorsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiILJetBrainsReSharperPsiILResourcesPsiILThemedIconsIl__IlGuid" Value="{c90f56af-66b8-4a88-af8e-f7320a7cea93}"></Guid>
+    <ID Name="JetBrainsReSharperPsiILJetBrainsReSharperPsiILResourcesPsiILThemedIconsIl__IlID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledByArrow__CalledByArrowGuid" Value="{34940be5-d202-4fb3-b6e0-a5261736ba25}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledByArrow__CalledByArrowID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCompositeElement__CompositeElementGuid" Value="{c1b08d76-4241-4928-9831-66fd7fb263df}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCompositeElement__CompositeElementID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsInspectionToolWindow__InspectionToolWindowGuid" Value="{2bef214b-8cb9-4cfb-ae62-9bf778554e9d}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsInspectionToolWindow__InspectionToolWindowID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInvocation__UsageInvocationGuid" Value="{8b82f916-3066-43b8-9ca6-8163b31547a8}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInvocation__UsageInvocationID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAllMembers__AllMembersGuid" Value="{b5247611-ed22-492f-afe8-4b6c995eb1c2}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAllMembers__AllMembersID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsVirtualMembers__VirtualMembersGuid" Value="{9d1e1623-8ba4-48fe-9957-27b10203a541}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsVirtualMembers__VirtualMembersID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageString__UsageStringGuid" Value="{25a18649-bbbc-417e-9579-786391a8522f}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageString__UsageStringID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMessageInfo__MessageInfoGuid" Value="{0331ab17-0fa9-425b-9ca3-c34710d31f92}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMessageInfo__MessageInfoID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsNuGet__NuGetGuid" Value="{99b54e5e-5eaa-42aa-a356-682fce444553}"></Guid>
+    <ID Name="JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsNuGet__NuGetID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsTypeLayoutAlt__TypeLayoutAltGuid" Value="{b56e2642-c8a4-48e7-8297-74a251c92836}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsTypeLayoutAlt__TypeLayoutAltID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsError__ErrorGuid" Value="{5685994e-6e56-41d9-8673-d0133cbab913}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsError__ErrorID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorOn__ErrorOnGuid" Value="{8a3e2b30-31e2-4ba2-a396-b8952a985dab}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorOn__ErrorOnID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageRead__UsageReadGuid" Value="{1f4baf7b-4294-40f9-81b6-fe04db8a4bea}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageRead__UsageReadID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxStringValue__ResxStringValueGuid" Value="{e67bc0f1-5437-492f-802e-2a4b3d230a1f}"></Guid>
+    <ID Name="JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxStringValue__ResxStringValueID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageWrite__UsageWriteGuid" Value="{7e470895-3dc5-41d0-a67f-de37461da60f}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageWrite__UsageWriteID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageOther__UsageOtherGuid" Value="{d355264c-5aff-4766-84b6-4a3fc2c3da5e}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageOther__UsageOtherID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledArrow__CalledArrowGuid" Value="{1bf893d8-d72c-4bb4-b302-13322ac74ccf}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledArrow__CalledArrowID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsPossiblePaths__PossiblePathsGuid" Value="{f20f5c3d-8b24-4a3a-a31c-f0dd4dccdaf1}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsPossiblePaths__PossiblePathsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsShowPredefinedTemplates__ShowPredefinedTemplatesGuid" Value="{ec693a60-989c-4f73-93c2-9b00730df060}"></Guid>
+    <ID Name="JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsShowPredefinedTemplates__ShowPredefinedTemplatesID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessExplorer__ProcessExplorerGuid" Value="{e21ae6e9-5416-4965-8569-56a501a6bf43}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessExplorer__ProcessExplorerID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProperties__PropertiesGuid" Value="{5652947e-2a51-44c3-88e4-eacf76f6365c}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProperties__PropertiesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageCompilerRelated__UsageCompilerRelatedGuid" Value="{0f2931fd-1770-4b2e-84f4-d34ded4dc947}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageCompilerRelated__UsageCompilerRelatedID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsReturn__ReturnGuid" Value="{647dd7b2-5746-4254-9284-41c481dc68b7}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsReturn__ReturnID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsBulb__BulbGuid" Value="{8bba587d-6795-4261-b372-d4286fb0f190}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsBulb__BulbID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEnableHeuristics__SolBuilderDuoEnableHeuristicsGuid" Value="{c23a2ec7-cdaf-4f6d-9626-2c671a827a81}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEnableHeuristics__SolBuilderDuoEnableHeuristicsID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSuccess__SuccessGuid" Value="{158e841f-28e4-4eb4-91b4-409c5b79419c}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSuccess__SuccessID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageTest__UsageTestGuid" Value="{2337bd36-80ec-44b7-b2a7-a2a15535e116}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageTest__UsageTestID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTestMethod__TestMethodGuid" Value="{f7a82aed-a2ac-4fc0-8e10-a280654a0a58}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTestMethod__TestMethodID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsUnitSession__UnitSessionGuid" Value="{4473ab98-315d-4d52-972c-8437d6f664cb}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsUnitSession__UnitSessionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsShowUnusedReferences__ShowUnusedReferencesGuid" Value="{55b83a0b-810f-4c11-ad88-8ba7b0d7e168}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsShowUnusedReferences__ShowUnusedReferencesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsInvocation__InvocationGuid" Value="{6a941d16-3381-4feb-b96b-eb2c160fdfd4}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsInvocation__InvocationID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsUsageHandles__UsageHandlesGuid" Value="{a25d9482-7b05-48dc-81c4-d6bd964541ba}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsUsageHandles__UsageHandlesID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInterface__UsageInterfaceGuid" Value="{b131da43-7b7e-4d12-bdb7-060fd40a9fba}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInterface__UsageInterfaceID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuildSelection__SolBuilderDuoBuildSelectionGuid" Value="{07f3d5b7-214c-4a50-896c-7668ccab0756}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuildSelection__SolBuilderDuoBuildSelectionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCleanSelection__SolBuilderDuoCleanSelectionGuid" Value="{7c27104d-ec49-4099-a9e3-486b2b00acba}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCleanSelection__SolBuilderDuoCleanSelectionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuildSelection__SolBuilderDuoRebuildSelectionGuid" Value="{da74540a-0954-4af9-b931-deeb312130f7}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuildSelection__SolBuilderDuoRebuildSelectionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCancel__SolBuilderDuoCancelGuid" Value="{464979a0-aab8-482b-900a-23d2d4ccf0a7}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCancel__SolBuilderDuoCancelID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowAll__SolBuilderDuoEventsViewFilterShowAllGuid" Value="{093a1828-b848-44dc-bd3f-dbec607dac1a}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowAll__SolBuilderDuoEventsViewFilterShowAllID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowConsole__SolBuilderDuoEventsViewFilterShowConsoleGuid" Value="{18aaa811-1480-492e-bf19-c9ede6c90df4}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowConsole__SolBuilderDuoEventsViewFilterShowConsoleID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowErrors__SolBuilderDuoEventsViewFilterShowErrorsGuid" Value="{079edc2d-c113-4817-835a-9fbe75603e3e}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowErrors__SolBuilderDuoEventsViewFilterShowErrorsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowOutput__SolBuilderDuoEventsViewFilterShowOutputGuid" Value="{d8782ec7-1be6-4c38-a371-0ac6a1684b75}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowOutput__SolBuilderDuoEventsViewFilterShowOutputID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowService__SolBuilderDuoEventsViewFilterShowServiceGuid" Value="{e2b40952-3c23-4de6-93ca-46f082e0433d}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowService__SolBuilderDuoEventsViewFilterShowServiceID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowWarnings__SolBuilderDuoEventsViewFilterShowWarningsGuid" Value="{7e98aac0-f767-4226-bd1a-a754c38506ee}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowWarnings__SolBuilderDuoEventsViewFilterShowWarningsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsVsShortcutOptionsPage__VsShortcutOptionsPageGuid" Value="{0808aee5-ede9-4bb9-a366-484c7701e260}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsVsShortcutOptionsPage__VsShortcutOptionsPageID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsLineBreaks__LineBreaksGuid" Value="{de3105b5-538a-417d-b23f-a364117b2c2e}"></Guid>
+    <ID Name="JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsLineBreaks__LineBreaksID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunTest__RunTestGuid" Value="{52d8d0e8-3ddd-4b8a-889a-64f988a24a5a}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunTest__RunTestID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesStructuralSearchServicesThemedIconsEditPattern__EditPatternGuid" Value="{5943dd59-1677-4888-be26-99da54d54bff}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesStructuralSearchServicesThemedIconsEditPattern__EditPatternID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesStructuralSearchJetBrainsReSharperFeaturesStructuralSearchResourcesStructuralSearchThemedIconsPattern__PatternGuid" Value="{a6252b2b-78b3-448e-bf6b-cc5ad98aa983}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesStructuralSearchJetBrainsReSharperFeaturesStructuralSearchResourcesStructuralSearchThemedIconsPattern__PatternID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsPsiSymbolTypicalSizePlaceholder__PsiSymbolTypicalSizePlaceholderGuid" Value="{53fd1e38-1e3e-4b69-ba8f-cb856e5eb383}"></Guid>
+    <ID Name="JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsPsiSymbolTypicalSizePlaceholder__PsiSymbolTypicalSizePlaceholderID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsHighlighting__HighlightingGuid" Value="{f41952aa-bfb7-4041-bb9c-e87a945e2585}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsHighlighting__HighlightingID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsGeneratedCode__GeneratedCodeGuid" Value="{90e9e139-6a8d-4b74-8deb-a6e6ecddd4fb}"></Guid>
+    <ID Name="JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsGeneratedCode__GeneratedCodeID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsTodoOptions__TodoOptionsGuid" Value="{cf5f4257-3c9c-416a-8865-e830fd3e6265}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsTodoOptions__TodoOptionsID" Value="1"></ID>
+    <Guid Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsHighlighting__HighlightingGuid" Value="{d654f51f-e4ef-4e4a-8190-3ea77c2fe4f9}"></Guid>
+    <ID Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsHighlighting__HighlightingID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFilter__FilterGuid" Value="{cb9fd4aa-fb4d-453f-9d55-7410100f39cc}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFilter__FilterID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTrackRun__TrackRunGuid" Value="{47efce4d-67e3-4931-839b-48a56a4f405e}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTrackRun__TrackRunID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCollapseAll__CollapseAllGuid" Value="{dfd0ea91-81a2-49d9-b7e5-1190e75e55dc}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCollapseAll__CollapseAllID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExpandAll__ExpandAllGuid" Value="{f9fd5893-5943-438d-bfed-86f18e99c835}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExpandAll__ExpandAllID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNamespace__GroupingNamespaceGuid" Value="{46449823-5863-45b0-8984-90fc7d6f23f0}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNamespace__GroupingNamespaceID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNone__GroupingNoneGuid" Value="{b6a703fe-ea5f-42bc-b665-f3d400072e8c}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNone__GroupingNoneID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingFolder__GroupingFolderGuid" Value="{1ea7a41d-594d-4988-ae2c-faffece9f4a8}"></Guid>
+    <ID Name="JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingFolder__GroupingFolderID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUndo__UndoGuid" Value="{7662136d-768e-459d-8b1b-87149db78c00}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUndo__UndoID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsUnignoreErrors__UnignoreErrorsGuid" Value="{1329b721-0e68-499b-942a-6c6b0b18ad1f}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsUnignoreErrors__UnignoreErrorsID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDebug__DebugGuid" Value="{a98a05ab-2d58-42cc-aba3-a4f8fa33c485}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDebug__DebugID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunAll__RunAllGuid" Value="{d8e81c6e-ad6e-4c3b-90e2-ea129be91f67}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunAll__RunAllID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsStopTest__StopTestGuid" Value="{2c750ea3-e74f-48f1-acb6-f5e65faee0c8}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsStopTest__StopTestID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsLockSession__LockSessionGuid" Value="{9f48b2b5-da39-4316-b471-909fbd5c1e71}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsLockSession__LockSessionID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTime__TimeGuid" Value="{e6bd3cc2-4e95-42bc-a79d-c0998fd755a3}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTime__TimeID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsStop__StopGuid" Value="{bb018fe7-4c37-4f5a-97a7-b7848dc84ce4}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsStop__StopID" Value="1"></ID>
+    <Guid Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsMemoryAllocation__MemoryAllocationGuid" Value="{daece9c9-1edb-4bff-a730-7097c0b50e84}"></Guid>
+    <ID Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsMemoryAllocation__MemoryAllocationID" Value="1"></ID>
+    <Guid Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsAsp__AspGuid" Value="{d47059f6-7101-49ce-9d7e-b98e44960c88}"></Guid>
+    <ID Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsAsp__AspID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperPsiCSharpJetBrainsReSharperPsiCSharpResourcesPsiCSharpThemedIconsCsharp__CsharpGuid" Value="{20dfa237-0bca-49cb-ae7d-21b2d87db3c0}"></Guid>
+    <ID Name="JetBrainsReSharperPsiCSharpJetBrainsReSharperPsiCSharpResourcesPsiCSharpThemedIconsCsharp__CsharpID" Value="1"></ID>
+    <Guid Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsSql__SqlGuid" Value="{bfb1b50a-e295-4480-9a21-9b6febab0487}"></Guid>
+    <ID Name="JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsSql__SqlID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClose__CloseGuid" Value="{24d29475-e4b7-4607-9da3-cea333bf74e4}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClose__CloseID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsCopySettings__CopySettingsGuid" Value="{bb392655-5b44-496a-ba3f-f020ba265d63}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsCopySettings__CopySettingsID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisOptions__SolutionAnalysisOptionsGuid" Value="{022ce062-689e-41a4-99c4-ae91ee33a6b4}"></Guid>
+    <ID Name="JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisOptions__SolutionAnalysisOptionsID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportExportLayer__ImportExportLayerGuid" Value="{6c6f6572-0e93-4f8c-9a6e-d3d2574f7762}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportExportLayer__ImportExportLayerID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilter__SolBuilderDuoEventsViewFilterGuid" Value="{2bd338cc-29d0-4d47-bb60-325ce5c1653c}"></Guid>
+    <ID Name="JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilter__SolBuilderDuoEventsViewFilterID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsPreviewToggle__PreviewToggleGuid" Value="{685496b0-b8d6-4f59-81fc-db6530f5bcdb}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsPreviewToggle__PreviewToggleID" Value="1"></ID>
+    <Guid Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsSpecialThemedIconsSpecialThemedIconsPlaceholder__PlaceholderGuid" Value="{148118af-05ac-4fb6-88f2-076ff25093f3}"></Guid>
+    <ID Name="JetBrainsPlatformShellJetBrainsApplicationUIIconsSpecialThemedIconsSpecialThemedIconsPlaceholder__PlaceholderID" Value="1"></ID>
+    <Guid Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsBuildPolicy__BuildPolicyGuid" Value="{5edc86a4-87a4-4baf-b4ca-3df8101cee0f}"></Guid>
+    <ID Name="JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsBuildPolicy__BuildPolicyID" Value="1"></ID>
+  </Symbols>
+  <Images>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAddMissing__AddMissingGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAddMissing__AddMissingID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsaddmissing__addmissing.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCreate__CreateGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCreate__CreateID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconscreate__create.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsMoveLiveTemplate__MoveLiveTemplateGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsMoveLiveTemplate__MoveLiveTemplateID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesfeaturesenvironmentthemediconsmovelivetemplate__movelivetemplate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysis__SolutionAnalysisGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysis__SolutionAnalysisID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconssolutionanalysis__solutionanalysis.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindDependentCode__FindDependentCodeGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindDependentCode__FindDependentCodeID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsfinddependentcode__finddependentcode.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveSelectedReference__RemoveSelectedReferenceGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveSelectedReference__RemoveSelectedReferenceID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsremoveselectedreference__removeselectedreference.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveAllUnusedReferences__RemoveAllUnusedReferencesGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsRemoveAllUnusedReferences__RemoveAllUnusedReferencesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsremoveallunusedreferences__removeallunusedreferences.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRefresh__RefreshGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRefresh__RefreshID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsrefresh__refresh.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsAppendSession__AppendSessionGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsAppendSession__AppendSessionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsappendsession__appendsession.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneGenerate__FuncZoneGenerateGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneGenerate__FuncZoneGenerateID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsfunczonegenerate__funczonegenerate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAddFolder__AddFolderGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAddFolder__AddFolderID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsaddfolder__addfolder.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyAdd__AssemblyAddGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyAdd__AssemblyAddID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsassemblyadd__assemblyadd.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesLocalHistoryThemedIconsDiff__DiffGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesLocalHistoryThemedIconsDiff__DiffID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourceslocalhistorythemediconsdiff__diff.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProjectGeneration__ProjectGenerationGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProjectGeneration__ProjectGenerationID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsprojectgeneration__projectgeneration.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRemove__RemoveGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRemove__RemoveID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsremove__remove.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsScrollToBottom__ScrollToBottomGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsScrollToBottom__ScrollToBottomID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsscrolltobottom__scrolltobottom.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsBase__BaseGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsBase__BaseID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconsbase__base.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsUIThemedIconsVsDebuggerThemedIconsBreakpointEnabled__BreakpointEnabledGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsUIThemedIconsVsDebuggerThemedIconsBreakpointEnabled__BreakpointEnabledID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsuithemediconsvsdebuggerthemediconsbreakpointenabled__breakpointenabled.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsIgnore__IgnoreGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsIgnore__IgnoreID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsignore__ignore.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsTypeHierarchyToolWindow__TypeHierarchyToolWindowGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsTypeHierarchyToolWindow__TypeHierarchyToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconstypehierarchytoolwindow__typehierarchytoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuild__SolBuilderDuoBuildGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuild__SolBuilderDuoBuildID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduobuild__solbuilderduobuild.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAbort__AbortGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAbort__AbortID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsabort__abort.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagUnchecked__FlagUncheckedGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagUnchecked__FlagUncheckedID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsflagunchecked__flagunchecked.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagChecked__FlagCheckedGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFlagChecked__FlagCheckedID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsflagchecked__flagchecked.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsUpdates__UpdatesGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsUpdates__UpdatesID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsupdates__updates.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSubtypes__SubtypesGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSubtypes__SubtypesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconssubtypes__subtypes.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesResxJetBrainsReSharperFeatureServicesResxResourcesServices118nThemedIconsLocalization__LocalizationGuid)" ID="$(JetBrainsReSharperFeatureServicesResxJetBrainsReSharperFeatureServicesResxResourcesServices118nThemedIconsLocalization__LocalizationID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesresxjetbrainsresharperfeatureservicesresxresourcesservices118nthemediconslocalization__localization.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoClean__SolBuilderDuoCleanGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoClean__SolBuilderDuoCleanID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoclean__solbuilderduoclean.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceClear__WorkspaceClearGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceClear__WorkspaceClearID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsworkspaceclear__workspaceclear.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDuplicate__DuplicateGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDuplicate__DuplicateID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsduplicate__duplicate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsEnregion__EnregionGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsEnregion__EnregionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsenregion__enregion.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsMacro__MacroGuid)" ID="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsMacro__MacroID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsijetbrainsresharperpsiresourcespsisymbolsthemediconsmacro__macro.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncViewToCaret__SyncViewToCaretGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncViewToCaret__SyncViewToCaretID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconssyncviewtocaret__syncviewtocaret.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncCaretToView__SyncCaretToViewGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSyncCaretToView__SyncCaretToViewID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconssynccarettoview__synccarettoview.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsCollapseGraph__CollapseGraphGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsCollapseGraph__CollapseGraphID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsdiagrammingresourcesdiagrammingthemediconscollapsegraph__collapsegraph.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsOptions__OptionsGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsOptions__OptionsID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsoptions__options.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsAutogeneratedProperty__AutogeneratedPropertyGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsAutogeneratedProperty__AutogeneratedPropertyID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationresourcesidethemediconsautogeneratedproperty__autogeneratedproperty.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsMetricDisplay__MetricDisplayGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsMetricDisplay__MetricDisplayID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsdiagrammingresourcesdiagrammingthemediconsmetricdisplay__metricdisplay.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsNewFolderLiveTemplate__NewFolderLiveTemplateGuid)" ID="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsNewFolderLiveTemplate__NewFolderLiveTemplateID)">
+      <Source Uri="$(Resources)/jetbrainsresharperlivetemplatesjetbrainsresharperlivetemplatesresourceslivetemplatesthemediconsnewfolderlivetemplate__newfolderlivetemplate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsAddLiveTemplate__AddLiveTemplateGuid)" ID="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsAddLiveTemplate__AddLiveTemplateID)">
+      <Source Uri="$(Resources)/jetbrainsresharperlivetemplatesjetbrainsresharperlivetemplatesresourceslivetemplatesthemediconsaddlivetemplate__addlivetemplate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCopy16x16__Copy16x16Guid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCopy16x16__Copy16x16ID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconscopy16x16__copy16x16.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAnonymousBookmarkNew__AnonymousBookmarkNewGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAnonymousBookmarkNew__AnonymousBookmarkNewID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsanonymousbookmarknew__anonymousbookmarknew.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDelete__DeleteGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDelete__DeleteID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsdelete__delete.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsToolWindowIcon__ToolWindowIconGuid)" ID="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsToolWindowIcon__ToolWindowIconID)">
+      <Source Uri="$(Resources)/jetbrainsdpacoredpacoreresourcesdpacorethemediconsdpacorethemediconstoolwindowicon__toolwindowicon.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsEditLayer__EditLayerGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsEditLayer__EditLayerID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconseditlayer__editlayer.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsEditTemplate__EditTemplateGuid)" ID="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsEditTemplate__EditTemplateID)">
+      <Source Uri="$(Resources)/jetbrainsresharperlivetemplatesjetbrainsresharperlivetemplatesresourceslivetemplatesthemediconsedittemplate__edittemplate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiXmlJetBrainsReSharperPsiXmlResourcesPsiXmlThemedIconsXmlNode__XmlNodeGuid)" ID="$(JetBrainsReSharperPsiXmlJetBrainsReSharperPsiXmlResourcesPsiXmlThemedIconsXmlNode__XmlNodeID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsixmljetbrainsresharperpsixmlresourcespsixmlthemediconsxmlnode__xmlnode.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRight__RightGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRight__RightID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsright__right.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsExpandGraph__ExpandGraphGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsExpandGraph__ExpandGraphID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsdiagrammingresourcesdiagrammingthemediconsexpandgraph__expandgraph.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsStackTraceExplorerToolWindow__StackTraceExplorerToolWindowGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsStackTraceExplorerToolWindow__StackTraceExplorerToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconsstacktraceexplorertoolwindow__stacktraceexplorertoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExport__ExportGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExport__ExportID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsexport__export.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsExportLayer__ExportLayerGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsExportLayer__ExportLayerID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsexportlayer__exportlayer.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportHtml__ExportHtmlGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportHtml__ExportHtmlID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationresourcesidethemediconsexporthtml__exporthtml.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportText__ExportTextGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportText__ExportTextID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationresourcesidethemediconsexporttext__exporttext.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportXml__ExportXmlGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsExportXml__ExportXmlID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationresourcesidethemediconsexportxml__exportxml.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsPlugins__PluginsGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsPlugins__PluginsID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsplugins__plugins.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsExcludeLibraryElement__ExcludeLibraryElementGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsExcludeLibraryElement__ExcludeLibraryElementID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsexcludelibraryelement__excludelibraryelement.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsFilterIssues__FilterIssuesGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsFilterIssues__FilterIssuesID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconsfilterissues__filterissues.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindSymbolsExternalToScope__FindSymbolsExternalToScopeGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFindSymbolsExternalToScope__FindSymbolsExternalToScopeID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsfindsymbolsexternaltoscope__findsymbolsexternaltoscope.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesExternalSourcesThemedIconsSourcesFromSymbolFiles__SourcesFromSymbolFilesGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesExternalSourcesThemedIconsSourcesFromSymbolFiles__SourcesFromSymbolFilesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesexternalsourcesthemediconssourcesfromsymbolfiles__sourcesfromsymbolfiles.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsTransitiveEdges__TransitiveEdgesGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsTransitiveEdges__TransitiveEdgesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsdiagrammingresourcesdiagrammingthemediconstransitiveedges__transitiveedges.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsIgnoreErrors__IgnoreErrorsGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsIgnoreErrors__IgnoreErrorsID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconsignoreerrors__ignoreerrors.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsImplHierarchy__ImplHierarchyGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsImplHierarchy__ImplHierarchyID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsimplhierarchy__implhierarchy.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportLayer__ImportLayerGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportLayer__ImportLayerID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsimportlayer__importlayer.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsImportLiveTemplate__ImportLiveTemplateGuid)" ID="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsImportLiveTemplate__ImportLiveTemplateID)">
+      <Source Uri="$(Resources)/jetbrainsresharperlivetemplatesjetbrainsresharperlivetemplatesresourceslivetemplatesthemediconsimportlivetemplate__importlivetemplate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisWarning__SolutionAnalysisWarningGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisWarning__SolutionAnalysisWarningID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconssolutionanalysiswarning__solutionanalysiswarning.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneAnalyze__FuncZoneAnalyzeGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneAnalyze__FuncZoneAnalyzeID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsfunczoneanalyze__funczoneanalyze.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsLeafInterface__LeafInterfaceGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsLeafInterface__LeafInterfaceID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsleafinterface__leafinterface.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsManageLayers__ManageLayersGuid)" ID="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsManageLayers__ManageLayersID)">
+      <Source Uri="$(Resources)/jetbrainsresharperlivetemplatesjetbrainsresharperlivetemplatesresourceslivetemplatesthemediconsmanagelayers__managelayers.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDown__DownGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDown__DownID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsdown__down.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUp__UpGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUp__UpID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsup__up.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneNavigate__FuncZoneNavigateGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneNavigate__FuncZoneNavigateID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsfunczonenavigate__funczonenavigate.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsNewSession__NewSessionGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsNewSession__NewSessionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsnewsession__newsession.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsWarning__WarningGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsWarning__WarningID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconswarning__warning.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPsiFeaturesVisualStudioCoreJetBrainsPsiFeaturesVisualStudioCoreResourcesPsiFeaturesVisualStudioCoreThemedIconsHistory__HistoryGuid)" ID="$(JetBrainsPsiFeaturesVisualStudioCoreJetBrainsPsiFeaturesVisualStudioCoreResourcesPsiFeaturesVisualStudioCoreThemedIconsHistory__HistoryID)">
+      <Source Uri="$(Resources)/jetbrainspsifeaturesvisualstudiocorejetbrainspsifeaturesvisualstudiocoreresourcespsifeaturesvisualstudiocorethemediconshistory__history.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsNamingConvention__NamingConventionGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsNamingConvention__NamingConventionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesfeaturesenvironmentoptionsthemediconsnamingconvention__namingconvention.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsNamespace__NamespaceGuid)" ID="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsNamespace__NamespaceID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsijetbrainsresharperpsiresourcespsisymbolsthemediconsnamespace__namespace.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsClass__ClassGuid)" ID="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsClass__ClassID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsijetbrainsresharperpsiresourcespsisymbolsthemediconsclass__class.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsMergeOccurrencesInFeaturesCommon__MergeOccurrencesInFeaturesCommonGuid)" ID="$(JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsMergeOccurrencesInFeaturesCommon__MergeOccurrencesInFeaturesCommonID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesnavigationjetbrainsresharperfeaturesnavigationresourcesfeaturescommonthemediconsmergeoccurrencesinfeaturescommon__mergeoccurrencesinfeaturescommon.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsKind__KindGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsKind__KindID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconskind__kind.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceLoad__WorkspaceLoadGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceLoad__WorkspaceLoadID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsworkspaceload__workspaceload.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorRead__ErrorReadGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorRead__ErrorReadID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconserrorread__errorread.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsModified__ModifiedGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsModified__ModifiedID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsmodified__modified.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerOpenFromGac__AssemblyExplorerOpenFromGacGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerOpenFromGac__AssemblyExplorerOpenFromGacID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsassemblyexploreropenfromgac__assemblyexploreropenfromgac.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddNugetPackage__AddNugetPackageGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddNugetPackage__AddNugetPackageID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsaddnugetpackage__addnugetpackage.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddFromNugetCache__AddFromNugetCacheGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddFromNugetCache__AddFromNugetCacheID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsaddfromnugetcache__addfromnugetcache.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddProcess__AddProcessGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAddProcess__AddProcessID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsaddprocess__addprocess.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsToDoItemsToolWindow__ToDoItemsToolWindowGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsToDoItemsToolWindow__ToDoItemsToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcestodoitemsthemediconstodoitemstoolwindow__todoitemstoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsFolderOpened__FolderOpenedGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsFolderOpened__FolderOpenedID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationresourcesidethemediconsfolderopened__folderopened.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAnalyzeReferences__AnalyzeReferencesGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsAnalyzeReferences__AnalyzeReferencesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsanalyzereferences__analyzereferences.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxFile__ResxFileGuid)" ID="$(JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxFile__ResxFileID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsiresxjetbrainsresharperpsiresxresourcespsiresxthemediconsresxfile__resxfile.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSupertypes__SupertypesGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsSupertypes__SupertypesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconssupertypes__supertypes.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisPause__SolutionAnalysisPauseGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisPause__SolutionAnalysisPauseID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconssolutionanalysispause__solutionanalysispause.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsMountLayer__MountLayerGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsMountLayer__MountLayerID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsmountlayer__mountlayer.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFindWindow__FindWindowGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFindWindow__FindWindowID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsfindwindow__findwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeModule__NativeModuleGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeModule__NativeModuleID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsnativemodule__nativemodule.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeProcess__NativeProcessGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsNativeProcess__NativeProcessID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsnativeprocess__nativeprocess.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClr__ClrGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClr__ClrID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsclr__clr.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessHierarchy__ProcessHierarchyGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessHierarchy__ProcessHierarchyID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsprocesshierarchy__processhierarchy.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRunAll__DotMemoryUnitRunAllGuid)" ID="$(JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRunAll__DotMemoryUnitRunAllID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestrunnerdotmemoryunitjetbrainsresharperunittestrunnerdotmemoryunitresourcesdotmemoryunitprivatethemediconsdotmemoryunitrunall__dotmemoryunitrunall.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRun__DotMemoryUnitRunGuid)" ID="$(JetBrainsReSharperUnitTestRunnerDotMemoryUnitJetBrainsReSharperUnitTestRunnerDotMemoryUnitResourcesDotMemoryUnitPrivateThemedIconsDotMemoryUnitRun__DotMemoryUnitRunID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestrunnerdotmemoryunitjetbrainsresharperunittestrunnerdotmemoryunitresourcesdotmemoryunitprivatethemediconsdotmemoryunitrun__dotmemoryunitrun.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDotTraceExecute__DotTraceExecuteGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDotTraceExecute__DotTraceExecuteID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsdottraceexecute__dottraceexecute.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsHierarchy__HierarchyGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsHierarchy__HierarchyID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconshierarchy__hierarchy.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsAssemblies__AssembliesGuid)" ID="$(JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsAssemblies__AssembliesID)">
+      <Source Uri="$(Resources)/jetbrainsplatformprojectmodeljetbrainsprojectmodelresourcesprojectmodelthemediconsassemblies__assemblies.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDocument__DocumentGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDocument__DocumentID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsdocument__document.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsSpaces__SpacesGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsSpaces__SpacesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedoptionsthemediconsspaces__spaces.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeAllFiles__ReanalyzeAllFilesGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeAllFiles__ReanalyzeAllFilesID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconsreanalyzeallfiles__reanalyzeallfiles.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeFilesWithErrors__ReanalyzeFilesWithErrorsGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsReanalyzeFilesWithErrors__ReanalyzeFilesWithErrorsID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconsreanalyzefileswitherrors__reanalyzefileswitherrors.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuild__SolBuilderDuoRebuildGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuild__SolBuilderDuoRebuildID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduorebuild__solbuilderduorebuild.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRedo__RedoGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsRedo__RedoID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsredo__redo.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneRefactoring__FuncZoneRefactoringGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsFuncZoneRefactoring__FuncZoneRefactoringID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsfunczonerefactoring__funczonerefactoring.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsRemoveUnusedRefactoring__RemoveUnusedRefactoringGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedThemedIconsRemoveUnusedRefactoring__RemoveUnusedRefactoringID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedthemediconsremoveunusedrefactoring__removeunusedrefactoring.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsEdit__EditGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsEdit__EditID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsedit__edit.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRerun__RerunGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRerun__RerunID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsrerun__rerun.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsResetLayer__ResetLayerGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsResetLayer__ResetLayerID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsresetlayer__resetlayer.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperProductJetBrainsReSharperProductResourcesReSharperUIThemedIconsReSharper16x16__ReSharper16x16Guid)" ID="$(JetBrainsReSharperProductJetBrainsReSharperProductResourcesReSharperUIThemedIconsReSharper16x16__ReSharper16x16ID)">
+      <Source Uri="$(Resources)/jetbrainsresharperproductjetbrainsresharperproductresourcesresharperuithemediconsresharper16x16__resharper16x16.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsInline__InlineGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsInline__InlineID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsinline__inline.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMove__MoveGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMove__MoveID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsmove__move.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsPaste16x16__Paste16x16Guid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsPaste16x16__Paste16x16ID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconspaste16x16__paste16x16.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformVisualStudioCoreJetBrainsVsIntegrationResourcesRunConfigThemedIconsRunConfigProject__RunConfigProjectGuid)" ID="$(JetBrainsPlatformVisualStudioCoreJetBrainsVsIntegrationResourcesRunConfigThemedIconsRunConfigProject__RunConfigProjectID)">
+      <Source Uri="$(Resources)/jetbrainsplatformvisualstudiocorejetbrainsvsintegrationresourcesrunconfigthemediconsrunconfigproject__runconfigproject.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsSaveGraph__SaveGraphGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsSaveGraph__SaveGraphID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsdiagrammingresourcesdiagrammingthemediconssavegraph__savegraph.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceSave__WorkspaceSaveGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsWorkspaceSave__WorkspaceSaveID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsworkspacesave__workspacesave.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSave__SaveGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSave__SaveID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconssave__save.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsThreshold__ThresholdGuid)" ID="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsThreshold__ThresholdID)">
+      <Source Uri="$(Resources)/jetbrainsdpacoredpacoreresourcesdpacorethemediconsdpacorethemediconsthreshold__threshold.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsGraphDiff__GraphDiffGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsGraphDiff__GraphDiffID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsdiagrammingresourcesdiagrammingthemediconsgraphdiff__graphdiff.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsAggregation__AggregationGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsAggregation__AggregationID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsresharperfeaturesdiagrammingresourcesfeaturesdiagrammingthemediconsaggregation__aggregation.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAIMenus16Dark__AIMenus16DarkGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsAIMenus16Dark__AIMenus16DarkID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsaimenus16dark__aimenus16dark.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsUsageAll__UsageAllGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsUsageAll__UsageAllID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationresourcesidethemediconsusageall__usageall.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerToolWindow__AssemblyExplorerToolWindowGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsAssemblyExplorerToolWindow__AssemblyExplorerToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsassemblyexplorertoolwindow__assemblyexplorertoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageAttribute__UsageAttributeGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageAttribute__UsageAttributeID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusageattribute__usageattribute.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageBase__UsageBaseGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageBase__UsageBaseID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusagebase__usagebase.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRun__SolBuilderDuoRunGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRun__SolBuilderDuoRunID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduorun__solbuilderduorun.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsHourglass__HourglassGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsHourglass__HourglassID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconshourglass__hourglass.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsFileStructureToolWindow__FileStructureToolWindowGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsFileStructureToolWindow__FileStructureToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsfilestructuretoolwindow__filestructuretoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxDataComment__ResxDataCommentGuid)" ID="$(JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxDataComment__ResxDataCommentID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsiresxjetbrainsresharperpsiresxresourcespsiresxthemediconsresxdatacomment__resxdatacomment.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsConstructor__ConstructorGuid)" ID="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsConstructor__ConstructorID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsijetbrainsresharperpsiresourcespsisymbolsthemediconsconstructor__constructor.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageDocumentation__UsageDocumentationGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageDocumentation__UsageDocumentationID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusagedocumentation__usagedocumentation.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsProjectPropertiesFile__ProjectPropertiesFileGuid)" ID="$(JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsProjectPropertiesFile__ProjectPropertiesFileID)">
+      <Source Uri="$(Resources)/jetbrainsplatformprojectmodeljetbrainsprojectmodelresourcesprojectmodelthemediconsprojectpropertiesfile__projectpropertiesfile.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisToolWindow__SolutionAnalysisToolWindowGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisToolWindow__SolutionAnalysisToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconssolutionanalysistoolwindow__solutionanalysistoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsTypeLayout__TypeLayoutGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsTypeLayout__TypeLayoutID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsresharperfeaturesdiagrammingresourcesfeaturesdiagrammingthemediconstypelayout__typelayout.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsFindResultsToolWindow__FindResultsToolWindowGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsFindResultsToolWindow__FindResultsToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconsfindresultstoolwindow__findresultstoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProduce__ProduceGuid)" ID="$(JetBrainsReSharperExternalSourcesJetBrainsReSharperExternalSourcesResourcesAssemblyExplorerThemedIconsProduce__ProduceID)">
+      <Source Uri="$(Resources)/jetbrainsresharperexternalsourcesjetbrainsresharperexternalsourcesresourcesassemblyexplorerthemediconsproduce__produce.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsQuestion__QuestionGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsQuestion__QuestionID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsquestion__question.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsShowIgnoredErrors__ShowIgnoredErrorsGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsShowIgnoredErrors__ShowIgnoredErrorsID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconsshowignorederrors__showignorederrors.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiILJetBrainsReSharperPsiILResourcesPsiILThemedIconsIl__IlGuid)" ID="$(JetBrainsReSharperPsiILJetBrainsReSharperPsiILResourcesPsiILThemedIconsIl__IlID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsiiljetbrainsresharperpsiilresourcespsiilthemediconsil__il.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledByArrow__CalledByArrowGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledByArrow__CalledByArrowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcescallhierarchythemediconscalledbyarrow__calledbyarrow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCompositeElement__CompositeElementGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCompositeElement__CompositeElementID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconscompositeelement__compositeelement.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsInspectionToolWindow__InspectionToolWindowGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesThemedIconsInspectionToolWindow__InspectionToolWindowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesthemediconsinspectiontoolwindow__inspectiontoolwindow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInvocation__UsageInvocationGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInvocation__UsageInvocationID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusageinvocation__usageinvocation.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAllMembers__AllMembersGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsAllMembers__AllMembersID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsallmembers__allmembers.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsVirtualMembers__VirtualMembersGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsVirtualMembers__VirtualMembersID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsvirtualmembers__virtualmembers.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageString__UsageStringGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageString__UsageStringID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusagestring__usagestring.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMessageInfo__MessageInfoGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsMessageInfo__MessageInfoID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsmessageinfo__messageinfo.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsNuGet__NuGetGuid)" ID="$(JetBrainsPlatformProjectModelJetBrainsProjectModelResourcesProjectModelThemedIconsNuGet__NuGetID)">
+      <Source Uri="$(Resources)/jetbrainsplatformprojectmodeljetbrainsprojectmodelresourcesprojectmodelthemediconsnuget__nuget.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsTypeLayoutAlt__TypeLayoutAltGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentThemedIconsTypeLayoutAlt__TypeLayoutAltID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesfeaturesenvironmentthemediconstypelayoutalt__typelayoutalt.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsError__ErrorGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsError__ErrorID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconserror__error.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorOn__ErrorOnGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsErrorOn__ErrorOnID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconserroron__erroron.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageRead__UsageReadGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageRead__UsageReadID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusageread__usageread.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxStringValue__ResxStringValueGuid)" ID="$(JetBrainsReSharperPsiResxJetBrainsReSharperPsiResxResourcesPsiResxThemedIconsResxStringValue__ResxStringValueID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsiresxjetbrainsresharperpsiresxresourcespsiresxthemediconsresxstringvalue__resxstringvalue.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageWrite__UsageWriteGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageWrite__UsageWriteID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusagewrite__usagewrite.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageOther__UsageOtherGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageOther__UsageOtherID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusageother__usageother.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledArrow__CalledArrowGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesCallHierarchyThemedIconsCalledArrow__CalledArrowID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcescallhierarchythemediconscalledarrow__calledarrow.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsPossiblePaths__PossiblePathsGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsDiagrammingResourcesDiagrammingThemedIconsPossiblePaths__PossiblePathsID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsdiagrammingresourcesdiagrammingthemediconspossiblepaths__possiblepaths.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsShowPredefinedTemplates__ShowPredefinedTemplatesGuid)" ID="$(JetBrainsReSharperLiveTemplatesJetBrainsReSharperLiveTemplatesResourcesLiveTemplatesThemedIconsShowPredefinedTemplates__ShowPredefinedTemplatesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperlivetemplatesjetbrainsresharperlivetemplatesresourceslivetemplatesthemediconsshowpredefinedtemplates__showpredefinedtemplates.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessExplorer__ProcessExplorerGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProcessExplorer__ProcessExplorerID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsprocessexplorer__processexplorer.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProperties__PropertiesGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsProperties__PropertiesID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsproperties__properties.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageCompilerRelated__UsageCompilerRelatedGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageCompilerRelated__UsageCompilerRelatedID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusagecompilerrelated__usagecompilerrelated.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsReturn__ReturnGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsReturn__ReturnID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsresharperfeaturesdiagrammingresourcesfeaturesdiagrammingthemediconsreturn__return.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsBulb__BulbGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsBulb__BulbID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsbulb__bulb.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEnableHeuristics__SolBuilderDuoEnableHeuristicsGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEnableHeuristics__SolBuilderDuoEnableHeuristicsID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoenableheuristics__solbuilderduoenableheuristics.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSuccess__SuccessGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsSuccess__SuccessID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconssuccess__success.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageTest__UsageTestGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageTest__UsageTestID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusagetest__usagetest.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTestMethod__TestMethodGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTestMethod__TestMethodID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconstestmethod__testmethod.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsUnitSession__UnitSessionGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsUnitSession__UnitSessionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsunitsession__unitsession.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsShowUnusedReferences__ShowUnusedReferencesGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsShowUnusedReferences__ShowUnusedReferencesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsshowunusedreferences__showunusedreferences.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsInvocation__InvocationGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesFeaturesInspectionsThemedIconsInvocation__InvocationID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcesfeaturesinspectionsthemediconsinvocation__invocation.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsUsageHandles__UsageHandlesGuid)" ID="$(JetBrainsReSharperFeaturesNavigationJetBrainsReSharperFeaturesNavigationResourcesFeaturesCommonThemedIconsUsageHandles__UsageHandlesID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesnavigationjetbrainsresharperfeaturesnavigationresourcesfeaturescommonthemediconsusagehandles__usagehandles.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInterface__UsageInterfaceGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesServicesNavigationThemedIconsUsageInterface__UsageInterfaceID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesservicesnavigationthemediconsusageinterface__usageinterface.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuildSelection__SolBuilderDuoBuildSelectionGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoBuildSelection__SolBuilderDuoBuildSelectionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduobuildselection__solbuilderduobuildselection.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCleanSelection__SolBuilderDuoCleanSelectionGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCleanSelection__SolBuilderDuoCleanSelectionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduocleanselection__solbuilderduocleanselection.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuildSelection__SolBuilderDuoRebuildSelectionGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoRebuildSelection__SolBuilderDuoRebuildSelectionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduorebuildselection__solbuilderduorebuildselection.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCancel__SolBuilderDuoCancelGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoCancel__SolBuilderDuoCancelID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduocancel__solbuilderduocancel.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowAll__SolBuilderDuoEventsViewFilterShowAllGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowAll__SolBuilderDuoEventsViewFilterShowAllID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoeventsviewfiltershowall__solbuilderduoeventsviewfiltershowall.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowConsole__SolBuilderDuoEventsViewFilterShowConsoleGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowConsole__SolBuilderDuoEventsViewFilterShowConsoleID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoeventsviewfiltershowconsole__solbuilderduoeventsviewfiltershowconsole.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowErrors__SolBuilderDuoEventsViewFilterShowErrorsGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowErrors__SolBuilderDuoEventsViewFilterShowErrorsID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoeventsviewfiltershowerrors__solbuilderduoeventsviewfiltershowerrors.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowOutput__SolBuilderDuoEventsViewFilterShowOutputGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowOutput__SolBuilderDuoEventsViewFilterShowOutputID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoeventsviewfiltershowoutput__solbuilderduoeventsviewfiltershowoutput.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowService__SolBuilderDuoEventsViewFilterShowServiceGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowService__SolBuilderDuoEventsViewFilterShowServiceID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoeventsviewfiltershowservice__solbuilderduoeventsviewfiltershowservice.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowWarnings__SolBuilderDuoEventsViewFilterShowWarningsGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilterShowWarnings__SolBuilderDuoEventsViewFilterShowWarningsID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoeventsviewfiltershowwarnings__solbuilderduoeventsviewfiltershowwarnings.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsVsShortcutOptionsPage__VsShortcutOptionsPageGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsVsShortcutOptionsPage__VsShortcutOptionsPageID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconsvsshortcutoptionspage__vsshortcutoptionspage.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsLineBreaks__LineBreaksGuid)" ID="$(JetBrainsReSharperResourcesJetBrainsReSharperResourcesResourcesIconsPsiFeaturesUnsortedOptionsThemedIconsLineBreaks__LineBreaksID)">
+      <Source Uri="$(Resources)/jetbrainsresharperresourcesjetbrainsresharperresourcesresourcesiconspsifeaturesunsortedoptionsthemediconslinebreaks__linebreaks.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunTest__RunTestGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunTest__RunTestID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsruntest__runtest.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesStructuralSearchServicesThemedIconsEditPattern__EditPatternGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesStructuralSearchServicesThemedIconsEditPattern__EditPatternID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesstructuralsearchservicesthemediconseditpattern__editpattern.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesStructuralSearchJetBrainsReSharperFeaturesStructuralSearchResourcesStructuralSearchThemedIconsPattern__PatternGuid)" ID="$(JetBrainsReSharperFeaturesStructuralSearchJetBrainsReSharperFeaturesStructuralSearchResourcesStructuralSearchThemedIconsPattern__PatternID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesstructuralsearchjetbrainsresharperfeaturesstructuralsearchresourcesstructuralsearchthemediconspattern__pattern.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsPsiSymbolTypicalSizePlaceholder__PsiSymbolTypicalSizePlaceholderGuid)" ID="$(JetBrainsReSharperPsiJetBrainsReSharperPsiResourcesPsiSymbolsThemedIconsPsiSymbolTypicalSizePlaceholder__PsiSymbolTypicalSizePlaceholderID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsijetbrainsresharperpsiresourcespsisymbolsthemediconspsisymboltypicalsizeplaceholder__psisymboltypicalsizeplaceholder.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsHighlighting__HighlightingGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsHighlighting__HighlightingID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesfeaturesenvironmentoptionsthemediconshighlighting__highlighting.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsGeneratedCode__GeneratedCodeGuid)" ID="$(JetBrainsReSharperFeatureServicesJetBrainsReSharperFeatureServicesResourcesFeaturesEnvironmentOptionsThemedIconsGeneratedCode__GeneratedCodeID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeatureservicesjetbrainsresharperfeatureservicesresourcesfeaturesenvironmentoptionsthemediconsgeneratedcode__generatedcode.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsTodoOptions__TodoOptionsGuid)" ID="$(JetBrainsReSharperFeaturesInspectionsJetBrainsReSharperFeaturesInspectionsResourcesTodoItemsThemedIconsTodoOptions__TodoOptionsID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturesinspectionsjetbrainsresharperfeaturesinspectionsresourcestodoitemsthemediconstodooptions__todooptions.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsHighlighting__HighlightingGuid)" ID="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsHighlighting__HighlightingID)">
+      <Source Uri="$(Resources)/jetbrainsdpacoredpacoreresourcesdpacorethemediconsdpacorethemediconshighlighting__highlighting.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFilter__FilterGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsFilter__FilterID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsfilter__filter.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTrackRun__TrackRunGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTrackRun__TrackRunID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconstrackrun__trackrun.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCollapseAll__CollapseAllGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsCollapseAll__CollapseAllID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconscollapseall__collapseall.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExpandAll__ExpandAllGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsExpandAll__ExpandAllID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsexpandall__expandall.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNamespace__GroupingNamespaceGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNamespace__GroupingNamespaceID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsresharperfeaturesdiagrammingresourcesfeaturesdiagrammingthemediconsgroupingnamespace__groupingnamespace.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNone__GroupingNoneGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingNone__GroupingNoneID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsresharperfeaturesdiagrammingresourcesfeaturesdiagrammingthemediconsgroupingnone__groupingnone.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingFolder__GroupingFolderGuid)" ID="$(JetBrainsReSharperDiagrammingFeaturesJetBrainsReSharperFeaturesDiagrammingResourcesFeaturesDiagrammingThemedIconsGroupingFolder__GroupingFolderID)">
+      <Source Uri="$(Resources)/jetbrainsresharperdiagrammingfeaturesjetbrainsresharperfeaturesdiagrammingresourcesfeaturesdiagrammingthemediconsgroupingfolder__groupingfolder.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUndo__UndoGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsUndo__UndoID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsundo__undo.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsUnignoreErrors__UnignoreErrorsGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsUnignoreErrors__UnignoreErrorsID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconsunignoreerrors__unignoreerrors.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDebug__DebugGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsDebug__DebugID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsdebug__debug.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunAll__RunAllGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsRunAll__RunAllID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsrunall__runall.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsStopTest__StopTestGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsStopTest__StopTestID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsstoptest__stoptest.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsLockSession__LockSessionGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsLockSession__LockSessionID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconslocksession__locksession.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTime__TimeGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsTime__TimeID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconstime__time.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsStop__StopGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsStop__StopID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsstop__stop.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsMemoryAllocation__MemoryAllocationGuid)" ID="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsMemoryAllocation__MemoryAllocationID)">
+      <Source Uri="$(Resources)/jetbrainsdpacoredpacoreresourcesdpacorethemediconsdpacorethemediconsmemoryallocation__memoryallocation.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsAsp__AspGuid)" ID="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsAsp__AspID)">
+      <Source Uri="$(Resources)/jetbrainsdpacoredpacoreresourcesdpacorethemediconsdpacorethemediconsasp__asp.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperPsiCSharpJetBrainsReSharperPsiCSharpResourcesPsiCSharpThemedIconsCsharp__CsharpGuid)" ID="$(JetBrainsReSharperPsiCSharpJetBrainsReSharperPsiCSharpResourcesPsiCSharpThemedIconsCsharp__CsharpID)">
+      <Source Uri="$(Resources)/jetbrainsresharperpsicsharpjetbrainsresharperpsicsharpresourcespsicsharpthemediconscsharp__csharp.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsSql__SqlGuid)" ID="$(JetBrainsDpaCoreDpaCoreResourcesDpaCoreThemedIconsDpaCoreThemedIconsSql__SqlID)">
+      <Source Uri="$(Resources)/jetbrainsdpacoredpacoreresourcesdpacorethemediconsdpacorethemediconssql__sql.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClose__CloseGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsCommonThemedIconsCommonThemedIconsClose__CloseID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconscommonthemediconscommonthemediconsclose__close.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsCopySettings__CopySettingsGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsCopySettings__CopySettingsID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconscopysettings__copysettings.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisOptions__SolutionAnalysisOptionsGuid)" ID="$(JetBrainsReSharperSolutionAnalysisJetBrainsReSharperDaemonSolutionAnalysisResourcesSolutionAnalysisThemedIconsSolutionAnalysisOptions__SolutionAnalysisOptionsID)">
+      <Source Uri="$(Resources)/jetbrainsresharpersolutionanalysisjetbrainsresharperdaemonsolutionanalysisresourcessolutionanalysisthemediconssolutionanalysisoptions__solutionanalysisoptions.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportExportLayer__ImportExportLayerGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIOptionsOptionsThemedIconsOptionsThemedIconsImportExportLayer__ImportExportLayerID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuioptionsoptionsthemediconsoptionsthemediconsimportexportlayer__importexportlayer.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilter__SolBuilderDuoEventsViewFilterGuid)" ID="$(JetBrainsReSharperFeaturesSolBuilderDuoJetBrainsReSharperFeaturesSolBuilderDuoSrcSolBuilderDuoThemedIconsSolBuilderDuoEventsViewFilter__SolBuilderDuoEventsViewFilterID)">
+      <Source Uri="$(Resources)/jetbrainsresharperfeaturessolbuilderduojetbrainsresharperfeaturessolbuilderduosrcsolbuilderduothemediconssolbuilderduoeventsviewfilter__solbuilderduoeventsviewfilter.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsPreviewToggle__PreviewToggleGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationResourcesIdeThemedIconsPreviewToggle__PreviewToggleID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationresourcesidethemediconspreviewtoggle__previewtoggle.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsSpecialThemedIconsSpecialThemedIconsPlaceholder__PlaceholderGuid)" ID="$(JetBrainsPlatformShellJetBrainsApplicationUIIconsSpecialThemedIconsSpecialThemedIconsPlaceholder__PlaceholderID)">
+      <Source Uri="$(Resources)/jetbrainsplatformshelljetbrainsapplicationuiiconsspecialthemediconsspecialthemediconsplaceholder__placeholder.xaml"></Source>
+    </Image>
+    <Image Guid="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsBuildPolicy__BuildPolicyGuid)" ID="$(JetBrainsReSharperUnitTestFrameworkJetBrainsReSharperUnitTestFrameworkResourcesUnitTestingThemedIconsBuildPolicy__BuildPolicyID)">
+      <Source Uri="$(Resources)/jetbrainsresharperunittestframeworkjetbrainsresharperunittestframeworkresourcesunittestingthemediconsbuildpolicy__buildpolicy.xaml"></Source>
+    </Image>
+  </Images>
+  <ImageLists></ImageLists>
+</ImageManifest>

@@ -1,0 +1,5 @@
+﻿[$RootKey$\FeatureFlags\GitHub\EnableCopilotSemanticFiltering]
+"Title"="Enable C# semantic filtering for GitHub Copilot (requires restart)"
+"Description"="Enables Roslyn-powered suggestion filtering for C#."
+"Value"=dword:00000000
+"PreviewPaneChannels"="*"

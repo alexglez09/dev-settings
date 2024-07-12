@@ -1,0 +1,28 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="GitHub.Copilot" Version="1.206.0.0" Language="en-US" Publisher="GitHub" />
+    <DisplayName>GitHub Copilot Completions</DisplayName>
+    <Description>GitHub Copilot Completions is an AI pair programmer that helps you write code faster and with less work. For Visual Studio 17.10 or higher, GitHub Copilot (Chat and Completions) is built-in, it need not be installed as an extension.</Description>
+    <Icon>Copilot.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.5.33627,17.10)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.5.33627,17.10)">
+      <ProductArchitecture>arm64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.IntelliCode" Version="[17.4.33213,18.0)" DisplayName="IntelliCode" />
+  </Prerequisites>
+  <Dependencies></Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="GitHub.Copilot.VisualStudio.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="GitHub.Copilot.Vsix.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="GitHub.Copilot.Vsix.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="agent.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="inline.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="FeatureFlags.pkgdef" />
+  </Assets>
+</PackageManifest>

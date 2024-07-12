@@ -1,0 +1,97 @@
+[push]
+	default = simple
+[user]	
+	name = Alexander Gonzalez
+	email = alexglez.rae@gmail.com
+[merge]
+	tool = meld
+	guitool = meld
+[mergetool "meld"]
+	path = C:/Program Files/Meld/Meld.exe
+	cmd = \"C:/Program Files/Meld/meld.exe\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output \"$MERGED\"
+[diff]
+	guitool = meld
+[difftool "meld"]
+	path = C:/Program Files/Meld/Meld.exe
+	cmd = \"C:/Program Files/Meld/meld.exe\" \"$LOCAL\" \"$REMOTE\"
+[core]
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+	whitespace = -trailing-space,-indent-with-non-tab,-tab-in-indent
+[alias]
+	st = status
+	br = branch	
+	new = "!f() { git init && git ac \"Setting up repository with initial file(s)\" && git remote add origin \"$1\" && git pu && git st; }; f"
+	p = "!f() { git push origin $(git this|tail -n 1); }; f"
+	pu = "!f() { git push -u origin $(git this|tail -n 1); }; f"
+	pf = "!f() { git push -f origin $(git this|tail -n 1); }; f"
+	co = checkout
+	com = checkout main		
+	cor = "!f() { git del \"$1\" & git rlh && git fetch origin \"$1\" && git checkout -b \"$1\" origin/\"$1\" && git lg; }; f"
+	this = rev-parse --abbrev-ref HEAD
+	ac = !git add -A && git commit -m
+	acu = "!f() { git add -A && git commit -m \"$(git this|tail -n 1) $1\" && git lg; }; f"
+	amend = !git add -A && git commit --amend --no-edit
+	rename = !git add -A && git commit --amend
+	rss = reset --soft	
+	rsh = "!f() { git clean -f && git reset --hard \"$1\"; }; f"
+	rsa = "!f() { git amend && git rss \"$1\" && git amend && git lg; }; f"
+	rsr = "!f() { git fetch origin $(git this|tail -n 1) && git rsh origin/$(git this|tail -n 1) && git lg; }; f"
+	rlh = "!f() { git rsh $(git hash) && git clean -f && git lg; }; f"	
+	sl = stash list
+	ss = "!f() { git stash save \"$1\" && git sl; }; f"
+	sa = "!f() { git stash apply stash@{\"$1\"}; }; f"
+	sd = "!f() { git stash drop stash@{\"$1\"} && git sl; }; f"
+	hash = log -n1 --format=format:"%H" HEAD	
+	rb = rebase	
+	rbm = "!f() { git com && git rsr && git co - && git rb main && git lg; }; f"
+	rbms = "!f() { git co master && git rsr && git co - && git rb master && git lg; }; f"
+	rbc = "!f() { git rebase --continue && git clean -f ; }; f"
+	cp = cherry-pick	
+	cb = "!f() { echo Cherry-basing latest commit: && git fetch origin \"$1\" && git rsh origin/\"$1\" && git cp HEAD@{1} && git lg; }; f"
+	cbr = "!f() { echo Cherry-basing latest commit: && git rsr && git cp HEAD@{1} && git lg; }; f"
+	cbm = "!f() { echo Cherry-basing latest commit: && git com && git rsr && git co - && git rsh main && git cp HEAD@{1} && git lg; }; f"
+	cbms = "!f() { echo Cherry-basing latest commit: && git co master && git rsr && git co - && git rsh master && git cp HEAD@{1} && git lg; }; f"
+	cpc = "!f() { git cherry-pick --continue && git clean -f ; }; f"
+	mf = "!f() { git merge --no-ff \"$1\" && git lg; }; f"
+	mt = mergetool
+	rbr = "!f() { git fetch origin $(git this|tail -n 1) && git rebase origin/$(git this|tail -n 1) && git lg; }; f"	
+	lg = log --graph --abbrev-commit -5 --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'	
+	lr = "!f() { git fetch origin $(git this|tail -n 1) && git lg origin/$(git this|tail -n 1); }; f"
+	lrb = "!f() { git fetch origin \"$1\" && git lg origin/\"$1\"; }; f"
+	me = lg --author='Alexander Gonza'
+	find = "!f() { git log --grep=\"$1\"; }; f"
+	rl = reflog -10 --oneline
+	rld = reflog -10 --oneline --date=iso
+	aliass = config --get-regexp alias
+	cg = config --global
+	namess = log -1 -p -w --name-only
+	dropBrs = "!f() { git branch | grep -v main | xargs git branch -D; }; f"
+	untrack = update-index --assume-unchanged
+	track = update-index --no-assume-unchanged
+	del = branch -D
+	setupIgnore = "!f() { echo >> .gitignore && code .gitignore ; }; f"	
+	removeIgnored = "!f() { git rm -r --cached . && git ac \"Untrack files ignored\" && git p; }; f"
+[credential]
+	helper = store
+[color]
+	ui = auto
+[grep]
+	extendedRegexp = true
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+[safe]
+	directory = C:/Users/alexandergo	
+	directory = C:/Users/alex.gonzalez
+	directory = C:/Dev/dev-refs
+	directory = C:/Projects/environment-config
+	directory = C:/Projects/teams	
+	directory = C:/Projects/ps-payment-services
+	directory = C:/Projects/ps-tax-integration
+	directory = C:/Projects/ps-reporting
+[http]
+	sslVerify = true
+	sslbackend = schannel

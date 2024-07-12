@@ -1,0 +1,30 @@
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
+  <Metadata>
+    <Identity Id="f646ea44-feb2-4168-802a-80c9b64bb8bb" Version="2022.2.22190" Language="en-US" Publisher="SubMain" />
+    <DisplayName>GhostDoc Community for VS2017 and Later</DisplayName>
+    <Description xml:space="preserve">Generate XML Comments from source code using customizable templates, maintain clean and up-to-date documentation, produce help documentation in multiple formats - manually or from the build, use intelligent source code Spell Checker in Visual Studio, and more.</Description>
+    <MoreInfo>http://submain.com/products/ghostdoc.aspx</MoreInfo>
+    <License>EULA.rtf</License>
+    <ReleaseNotes>http://submain.com/fwlink/ghostdoc/release-notes</ReleaseNotes>
+    <!--<GettingStartedGuide>http://submain.com/fwlink/ghostdoc/tutorial/quickstart</GettingStartedGuide>-->
+    <Icon>GhostDoc.ico</Icon>
+    <PreviewImage>GhostDocPreview.png</PreviewImage>
+    <Tags>C#, Comments, Documentation, Help, help authoring, Help Documentation, Sandcastle, Spell Checker, Spelling, StyleCop, VB, visual basic, xml comments, xml documentation</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[15.0,17.0)" Id="Microsoft.VisualStudio.Community">
+      <ProductArchitecture>x86</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Community">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+  <Dependencies></Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,18.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" Path="SubMain.GhostDoc.Package.clr4.6.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" Path="SubMain.GhostDoc.Package.clr4.6.dll" />
+  </Assets>
+</PackageManifest>

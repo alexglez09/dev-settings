@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Actipro Syntax Language Definition (.langdef)
+  For use with Actipro SyntaxEditor and related products.
+  http://www.actiprosoftware.com
+
+'Markdown' language created by Actipro Software LLC.
+  Copyright (c) 2001-2019 Actipro Software LLC.  All rights reserved.
+
+-->
+<LanguageDefinition LanguageKey="Markdown" Creator="Actipro Software LLC" Copyright="Copyright (c) 2001-2019 Actipro Software LLC.  All rights reserved." xmlns="http://schemas.actiprosoftware.com/langdef/1.0">
+	<!-- Classification types -->
+	<LanguageDefinition.ClassificationTypes>
+		<ClassificationType Key="Identifier" />
+		<ClassificationType Key="MarkdownEmphasis" DefaultStyle="#FF800000,,True" />
+		<ClassificationType Key="MarkdownEscapedCharacter" DefaultStyle="#FFFF0000" />
+		<ClassificationType Key="MarkdownHeadingDelimiter" DefaultStyle="#FF2A6C28" />
+		<ClassificationType Key="MarkdownHeadingText" DefaultStyle="#FF008000" />
+		<ClassificationType Key="MarkdownHorizontalRule" DefaultStyle="#FF800080,,,#FFE8E8E8,True" />
+		<ClassificationType Key="MarkdownLinkText" DefaultStyle="#FF0080FF" />
+		<ClassificationType Key="MarkdownLinkUrl" DefaultStyle="#FF0000FF" />
+		<ClassificationType Key="MarkdownOperator" DefaultStyle="#FF71B5B6" />
+		<ClassificationType Key="MarkdownStrongEmphasis" DefaultStyle="#FF800000,True" />
+		<ClassificationType Key="Number" />
+	</LanguageDefinition.ClassificationTypes>
+	<!-- Lexer -->
+	<LanguageDefinition.Lexer>
+		<DynamicLexer>
+			<DynamicLexer.Macros>
+				<Macro Key="ZeroToThreeSpaces" Pattern="[ \p{Zs}]{0,3}" />
+			</DynamicLexer.Macros>
+			<!-- Default state -->
+			<State Id="1" Key="Default" DefaultTokenId="1" DefaultTokenKey="Text">
+				<State.ChildStates>
+					<StateRef Key="Heading" />
+					<StateRef Key="InlineLink" />
+					<StateRef Key="ReferenceLink" />
+				</State.ChildStates>
+				<RegexPatternGroup TokenId="2" TokenKey="HorizontalRule" ClassificationTypeKey="MarkdownHorizontalRule" LookBehindPattern="^ {Whitespace}* {LineTerminator}">
+					<RegexPattern Value="^ {ZeroToThreeSpaces} - {Whitespace}* - {Whitespace}* -  ({Whitespace}* -)* {Whitespace}? $ {LineTerminator}?" />
+					<RegexPattern Value="^ {ZeroToThreeSpaces} \* {Whitespace}* \* {Whitespace}* \*  ({Whitespace}* \*)* {Whitespace}? $ {LineTerminator}?" />
+					<RegexPattern Value="^ {ZeroToThreeSpaces} _ {Whitespace}* _ {Whitespace}* _  ({Whitespace}* _)* {Whitespace}? $ {LineTerminator}?" />
+				</RegexPatternGroup>
+				<RegexPatternGroup TokenId="3" TokenKey="Whitespace" Pattern="{Whitespace}+" />
+				<RegexPatternGroup TokenId="4" TokenKey="LineTerminator" Pattern="{LineTerminator}" />
+				<RegexPatternGroup TokenId="5" TokenKey="Emphasis" ClassificationTypeKey="MarkdownStrongEmphasis">
+					<RegexPattern Value="\*\* [^\*\n\s] ([^\*\n]* [^\*\n\s])? \*\*" />
+					<RegexPattern Value="\_\_ [^\_\n\s] ([^\_\n]* [^\_\n\s])? \_\_" />
+				</RegexPatternGroup>
+				<RegexPatternGroup TokenId="5" TokenKey="Emphasis" ClassificationTypeKey="MarkdownEmphasis">
+					<RegexPattern Value="\* [^\*\n\s] ([^\*\n]* [^\*\n\s])? \*" />
+					<RegexPattern Value="\_ [^\_\n\s] ([^\_\n]* [^\_\n\s])? \_" />
+				</RegexPatternGroup>
+				<RegexPatternGroup TokenId="1" TokenKey="Text" ClassificationTypeKey="Identifier" Pattern="(_ | {Alpha})({Word})*" />
+				<RegexPatternGroup TokenId="6" TokenKey="Operator" ClassificationTypeKey="MarkdownOperator" LookBehindPattern="^ {ZeroToThreeSpaces}">
+					<RegexPattern Value="&gt; ({Whitespace}* &gt;)*" />
+					<RegexPattern Value="\* {Whitespace}+" />
+					<RegexPattern Value="+ {Whitespace}+" />
+					<RegexPattern Value="\- {Whitespace}+" />
+					<RegexPattern Value="\d+\. {Whitespace}+" />
+					<RegexPattern Value="``` [^\n]*" />
+					<RegexPattern Value="~{3,} [^\n]*" />
+				</RegexPatternGroup>
+				<RegexPatternGroup TokenId="7" TokenKey="Number" ClassificationTypeKey="Number" Pattern="{Digit}* \. {Digit}+" LookAheadPattern="{NonWord}|\z" />
+				<RegexPatternGroup TokenId="7" TokenKey="Number" ClassificationTypeKey="Number" Pattern="{Digit}+" LookAheadPattern="{NonWord}|\z" />
+				<RegexPatternGroup TokenId="8" TokenKey="HeadingDelimiter" ClassificationTypeKey="MarkdownHeadingDelimiter" LookBehindPattern="[^\n] {Whitespace}* {LineTerminator}">
+					<RegexPattern Value="^ ={3,} {Whitespace}* $" />
+					<RegexPattern Value="^ -{3,} {Whitespace}* $" />
+				</RegexPatternGroup>
+				<RegexPatternGroup TokenId="9" TokenKey="EscapedCharacter" ClassificationTypeKey="MarkdownEscapedCharacter" Pattern="\\ [\\`*_\{\}\[\]\(\)#+\-\.!]" />
+			</State>
+			<!-- Heading state -->
+			<State Id="2" Key="Heading" DefaultTokenId="10" DefaultTokenKey="HeadingText" DefaultClassificationTypeKey="MarkdownHeadingText">
+				<State.Scopes>
+					<Scope>
+						<Scope.StartPatternGroup>
+							<RegexPatternGroup TokenId="11" TokenKey="HeadingStartDelimiter" ClassificationTypeKey="MarkdownHeadingDelimiter" Pattern="^ #{1,6}" />
+						</Scope.StartPatternGroup>
+						<Scope.EndPatternGroup>
+							<RegexPatternGroup TokenId="12" TokenKey="HeadingEndDelimiter" ClassificationTypeKey="MarkdownHeadingDelimiter" Pattern="(#{1,6} {Whitespace}*)? \n" />
+						</Scope.EndPatternGroup>
+					</Scope>
+				</State.Scopes>
+				<RegexPatternGroup TokenId="10" TokenKey="HeadingText" ClassificationTypeKey="MarkdownHeadingText" Pattern="[^#\n]+" />
+			</State>
+			<!-- InlineLink state -->
+			<State Id="3" Key="InlineLink" DefaultTokenId="1" DefaultTokenKey="Text">
+				<State.Scopes>
+					<Scope>
+						<Scope.StartPatternGroup>
+							<ExplicitPatternGroup Pattern="[" LookAheadPattern="[^\]]+ \] \( {Whitespace}* {NonLineTerminatorWhitespace}+ {Whitespace}* (\&quot; [^\&quot;\n]* \&quot; {Whitespace}*)?" />
+						</Scope.StartPatternGroup>
+						<Scope.EndPatternGroup>
+							<RegexPatternGroup Pattern="[\)\n]" />
+						</Scope.EndPatternGroup>
+					</Scope>
+				</State.Scopes>
+				<State.ChildStates>
+					<StateRef Key="InlineLinkAttributes" />
+				</State.ChildStates>
+				<RegexPatternGroup TokenId="13" TokenKey="LinkText" ClassificationTypeKey="MarkdownLinkText" Pattern="[^\]\n]+" />
+			</State>
+			<!-- InlineLinkAttributes state -->
+			<State Id="4" Key="InlineLinkAttributes" DefaultTokenId="14" DefaultTokenKey="LinkUrl">
+				<State.Scopes>
+					<Scope>
+						<Scope.StartPatternGroup>
+							<ExplicitPatternGroup Pattern="(" />
+						</Scope.StartPatternGroup>
+					</Scope>
+				</State.Scopes>
+				<RegexPatternGroup TokenId="15" TokenKey="LinkTitle" ClassificationTypeKey="MarkdownLinkText" Pattern="\&quot; [^\&quot;\)\n]* \&quot;" />
+				<RegexPatternGroup TokenId="14" TokenKey="LinkUrl" ClassificationTypeKey="MarkdownLinkUrl" Pattern="[^\)\&quot;\n]+" />
+			</State>
+			<!-- ReferenceLink state -->
+			<State Id="5" Key="ReferenceLink" DefaultTokenId="1" DefaultTokenKey="Text">
+				<State.Scopes>
+					<Scope>
+						<Scope.StartPatternGroup>
+							<ExplicitPatternGroup Pattern="[" LookAheadPattern="[^\]]+ \] {Whitespace}? \[" />
+						</Scope.StartPatternGroup>
+						<Scope.EndPatternGroup>
+							<RegexPatternGroup Pattern="[\]\n]" />
+						</Scope.EndPatternGroup>
+					</Scope>
+				</State.Scopes>
+				<RegexPatternGroup TokenId="13" TokenKey="LinkText" ClassificationTypeKey="MarkdownLinkText" Pattern="[^\]\n]+" />
+			</State>
+		</DynamicLexer>
+	</LanguageDefinition.Lexer>
+	<!-- Example text -->
+	<LanguageDefinition.ExampleText><![CDATA[Markdown Document
+=================
+
+Introduction
+------------
+
+Markdown is a plain text formatting syntax.
+
+
+# Headings #
+
+## Heading 2 ##
+### Heading 3 ###
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+
+# Blockquotes #
+
+> This is the first level of quoting.
+>
+> > This is nested blockquote.
+>
+> Back to the first level. 
+
+
+# Lists #
+
+*   Red
+*   Green
+*   Blue 
+
++   Red
++   Green
++   Blue 
+
+-   Red
+-   Green
+-   Blue 
+
+1.  Bird
+2.  McHale
+3.  Parish 
+
+
+# Code Blocks #
+
+``` ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+~~~~~~~~~~~~~~~~~~~~~
+a one-line code block
+~~~~~~~~~~~~~~~~~~~~~
+
+
+# Horizontal Rules #
+
+Horizontal rules are formed by placing three or more hyphens, asterisks, or underscores 
+on a line by themselves.
+
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+
+_______________
+
+
+# Links #
+
+This is [an example](http://example.com/ "Title") inline link.
+[This link](http://example.net/) has no title attribute. 
+
+This is [an example] [id] reference-style link.
+[id]: http://example.com/  "Optional Title Here" 
+
+[Google][] 
+[Google]: http://google.com/ 
+
+
+# Emphasis #
+
+These spans result in 'em' tags:
+
+*single asterisks*
+_single underscores_
+
+These spans result in 'strong' tags:
+
+**double asterisks**
+__double underscores__ 
+
+
+# Backslash Escapes #
+
+Unescaped:
+\ ` * _ { } [ ] ( ) # + - . !
+
+Escaped:
+\\ \` \* \_ \{ \} \[ \] \( \) \# \+ \- \. \!
+
+]]></LanguageDefinition.ExampleText>
+</LanguageDefinition>

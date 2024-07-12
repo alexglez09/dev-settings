@@ -1,0 +1,1060 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.Copilot.CodeIndex</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpContextFormatter.ExtractAndNormalizeTypeNames(System.String)">
+            <summary>
+            Normalizes C# type names, removing nullable annotations (?) and null forgiveness
+            annotations (!) to get the canonical, unqualified type name.
+            </summary>
+            <param name="typeName">The type name, as captured by the parser.</param>
+            <returns>
+            The unqualified type name, without any nullable or null forgiving
+            annotations.
+            </returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpContextFormatter.CreateGetterRegex">
+            <remarks>
+            Pattern explanation:<br />
+            <code>
+            ○ Match a whitespace character atomically any number of times.<br />
+            ○ Match the string "get".<br />
+            ○ 1st capture group.<br />
+                ○ Match with 3 alternative expressions.<br />
+                    ○ 2nd capture group.<br />
+                        ○ Match a whitespace character atomically any number of times.<br />
+                        ○ Match ';'.<br />
+                    ○ 3rd capture group.<br />
+                        ○ Match a whitespace character.<br />
+                        ○ Match the string "=&gt;".<br />
+                    ○ 4th capture group.<br />
+                        ○ Match a whitespace character atomically any number of times.<br />
+                        ○ Match '{'.<br />
+            ○ Match a whitespace character atomically any number of times.<br />
+            </code>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpContextFormatter.CreateSetterRegex">
+            <remarks>
+            Pattern explanation:<br />
+            <code>
+            ○ Match a whitespace character atomically any number of times.<br />
+            ○ Match the string "set".<br />
+            ○ 1st capture group.<br />
+                ○ Match with 3 alternative expressions.<br />
+                    ○ 2nd capture group.<br />
+                        ○ Match a whitespace character atomically any number of times.<br />
+                        ○ Match ';'.<br />
+                    ○ 3rd capture group.<br />
+                        ○ Match a whitespace character.<br />
+                        ○ Match the string "=&gt;".<br />
+                    ○ 4th capture group.<br />
+                        ○ Match a whitespace character atomically any number of times.<br />
+                        ○ Match '{'.<br />
+            ○ Match a whitespace character atomically any number of times.<br />
+            </code>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpReferenceExtractor.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpReferenceExtractor" /> class supporting
+            reference extraction from .CS files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpReferenceExtractor.ReferencesQuery">
+            <summary>
+            Tree-sitter query for extracting reference types that are accessible from any point of the document.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpReferenceExtractor.LocalReferenceQuery">
+            <summary>
+            Tree-sitter query for extracting local reference types in a smaller scope than a full document.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpSymbolExtractor">
+            <summary>
+            Implements a parser that extracts interesting syntax definitions, like classes, methods, and fields, from C# code
+            using GitHub's Tree-Sitter parsing library.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpSymbolExtractor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpSymbolExtractor" /> class.
+            symbol extraction from .CS files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpSymbolExtractor.SymbolQuery">
+             <summary>
+             Largely forked from: https://github.com/github/symbol-extraction/blob/main/crates/lib/src/queries/csharp.scm
+            
+             Query syntax is documented at: https://tree-sitter.github.io/tree-sitter/using-parsers#query-syntax.
+            
+             You can test your queries at: https://tree-sitter.github.io/tree-sitter/playground.
+            
+             More info: ----------------------------------------------------------------------------------------
+            
+             Each top level indented parenthesis pair is a separate query that ends up becoming a 'match'. Matches
+             are composed of one or more 'captures' (much like regex captures) that delimit spans of interest within.
+             One of these captures ends up being the top-level query (e.g. '@definition.class') and the rest are
+             from sub-queries. '@comment' is an example of a sub-query capture within many of the matches below.
+            
+             Parenthesized expressions like (class_declaration) @definition.class -- matches the class_declaration
+             grammar rule and names the capture 'definition.class'.
+            
+             '.' indicates that two neighboring matches must be immediately adjaencent.
+            
+             '*' indicates that there can be zero or more of the preceding expression.
+            
+             See the links above for more information.
+             </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.CSharp.CSharpSymbolExtractor.CreateNameFromScopes(System.String,System.Collections.Generic.IEnumerable{Conversations.Abstractions.Symbols.SymbolRange})">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.ContextFormatterBase.SupportedFileExtensions">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.ContextFormatterBase.FormatTypeDefinition(Conversations.Abstractions.Symbols.SymbolRange,System.Collections.Generic.IEnumerable{Conversations.Abstractions.Symbols.SymbolRange},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.ContextFormatterBase.ExtractAndNormalizeTypeNames(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.IContextFormatter">
+            <summary>
+            Interface for formatting context for a search query.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.IContextFormatter.SupportedFileExtensions">
+            <summary>
+            Gets the file extensions that this extractor supports.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.IContextFormatter.ExtractAndNormalizeTypeNames(System.String)">
+            <summary>
+            Accepts a type name and returns a normalized version of it.
+            </summary>
+            <param name="typeName">The name of a type.</param>
+            <returns>The normalized type name.</returns>
+            <remarks>
+            This method is used to normalize type names before they are used
+            in a search query. For example, it might remove nullable annotations,
+            normalize capitalization, or remove generic type arguments.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.IContextFormatter.FormatTypeDefinition(Conversations.Abstractions.Symbols.SymbolRange,System.Collections.Generic.IEnumerable{Conversations.Abstractions.Symbols.SymbolRange},System.String)">
+            <summary>
+            Accepts a symbol range and one or more child symbol ranges and formats
+            them into a string that can be used as context for a copilot query.
+            </summary>
+            <param name="typeDefinition">The symbol containing the encapsulating type.</param>
+            <param name="children">The symbol containing the children of this type.</param>
+            <param name="code">The code that the <paramref name="typeDefinition" /> range is over.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.SkeletonCodeGenerator">
+            <summary>
+            Parser that strips type references in a document and produces skeleton code for the
+            definition of each type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedEventArgs">
+            <summary>
+            Arguments for events concerning files that are marked as invalidated.
+            </summary>
+            <remarks>
+            Creates a new instance of <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedEventArgs" />.
+            </remarks>
+            <param name="invalidatedFiles">The files that were invalidated.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="invalidatedFiles" /> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedEventArgs.#ctor(System.Collections.Generic.IReadOnlyList{Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.InvalidatedFile})">
+            <summary>
+            Arguments for events concerning files that are marked as invalidated.
+            </summary>
+            <remarks>
+            Creates a new instance of <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedEventArgs" />.
+            </remarks>
+            <param name="invalidatedFiles">The files that were invalidated.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="invalidatedFiles" /> is <c>null</c>.</exception>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedEventArgs.InvalidatedFiles">
+            <summary>
+            Gets the files that were invalidated.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedReason">
+            <summary>
+            Reason why an indexed file was invalidated.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedReason.CreateUpdate">
+            <summary>
+            The file was created or updated.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedReason.Delete">
+            <summary>
+            The file was deleted.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedReason.NotifyInclude">
+            <summary>
+            The indexer needs to include this file.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.InvalidatedFile">
+            <summary>
+            Represents an invalidated file.
+            </summary>
+            <param name="FilePath">The path to the file that was invalidated.</param>
+            <param name="Reason">Indicates what changed.</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.InvalidatedFile.#ctor(System.String,Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.FileInvalidatedReason)">
+            <summary>
+            Represents an invalidated file.
+            </summary>
+            <param name="FilePath">The path to the file that was invalidated.</param>
+            <param name="Reason">Indicates what changed.</param>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.InvalidatedFile.FilePath">
+            <summary>The path to the file that was invalidated.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.InvalidatedFile.Reason">
+            <summary>Indicates what changed.</summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex">
+            <summary>
+            An interface for an index of programming language symbol definitions.
+            </summary>
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.Disposing">
+            <summary>
+            Raised right before the index is closed.
+            </summary>
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.FileInvalidated">
+            <summary>
+            Raised when <see cref="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)" />
+            is called for a batch of files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.Reader">
+            <summary>
+            Gets an <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader" /> for querying the index.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Adds documents to the index or queues them for incremental re-indexing if
+            they have not yet changed.
+            </summary>
+            <param name="documentPaths">The paths to the files to add or reindex.</param>
+            <param name="cancellationToken">Cancels the add or pending re-index operation.</param>
+            <returns>A task tracking the completion of the operation.</returns>
+            <remarks>
+            Queueing a previously indexed document for reindexing via this method is a 'no-op' unless
+            the document was written to since the last time it was indexed.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Adds documents to the index or queues them for incremental re-indexing if
+            they have not yet changed.
+            </summary>
+            <param name="documentPaths">The paths to the files to add or reindex.</param>
+            <param name="shouldNotify">
+            If <c>true</c>, raises the <see cref="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.FileInvalidated" /> event. This parameter should be
+            <c>false</c> if you are calling this method from within the <see cref="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.FileInvalidated" />
+            event handler to avoid reentrancy.
+            </param>
+            <param name="cancellationToken">Cancels the add or pending re-index operation.</param>
+            <returns>A task tracking the completion of the operation.</returns>
+            <remarks>
+            Queueing a previously indexed document for reindexing via this method is a 'no-op' unless
+            the document was written to since the last time it was indexed.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.DeleteDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Deletes the specified documents from the index.
+            </summary>
+            <param name="documentPaths">The documents to delete from the index.</param>
+            <param name="cancellationToken">Cancels the pending operation.</param>
+            <returns>A task tracking the progress of the operation.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex.UpdateAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Checks all documents in the index to see if they changed. Changed documents are reindexed.
+            </summary>
+            <param name="cancellationToken">Cancels the update operation.</param>
+            <returns>A task tracking the operation.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex">
+            <summary>
+            A facade over <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" /> that serializes writes but allows parallel reads.
+            </summary>
+            <remarks>
+            This class is intended to minimize resource waste caused by parallel re-indexing of the
+            same file on multiple threads in situations where that file is invalidated repeatedly
+            in rapid succession.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.#ctor(Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex)">
+            <summary>
+            Creates a new instance of <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex" /> that wraps an <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex" />
+            and serializes writes.
+            </summary>
+            <param name="symbolIndex">The index of symbols.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="symbolIndex" /> is <c>null</c>.</exception>
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.Disposing">
+            <inheritdoc />
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.FileInvalidated">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.Reader">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.DeleteDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.DisposeAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SchedulingSymbolIndex.UpdateAllAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex">
+            <summary>
+            Implements a symbol index that can be used to query for symbols by name or fuzzily resolve
+            references in a set of documents. Index supports incremental updates via the
+            <see cref="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)" />/ method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.CreateOrOpenAsync(System.Collections.Generic.IReadOnlySet{Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.ISymbolExtractor},System.String,System.Threading.CancellationToken)">
+            <summary>
+            Opens an existing database or creates a new one, if none exists.
+            </summary>
+            <param name="symbolExtractors">
+            A set of <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.ISymbolExtractor" /> to use to extract symbols from the documents.
+            </param>
+            <param name="databasePath">The path to the database on disk.</param>
+            <param name="cancellationToken">Cancels the open or update operation.</param>
+            <returns>A <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" />.</returns>
+            <remarks>
+            This method performs an update, checking the timestamps of all indexed documents, reindexing
+            as needed. Note that this class does not implement 'live' file watching, so
+            <see cref="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)" /> must be
+            called each time a file is added, changed, or deleted.
+            </remarks>
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.Disposing">
+            <inheritdoc />
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.FileInvalidated">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.Reader">
+            <summary>
+            Gets an <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader" /> for querying the index.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.DisposeAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.AddOrInvalidateDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Boolean,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.DeleteDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex.UpdateAllAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndexFileWatcher">
+            <summary>
+            Optional component of <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" /> that queues
+            index or reindex of any files that are added, deleted, or modified
+            while the indexer is running.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndexFileWatcher.Attach(Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.ISymbolIndex)">
+            <summary>
+            Attaches this file watcher to a <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" />.
+            </summary>
+            <param name="index">The index to attach to.</param>
+            <remarks>
+            File watchers are automatically created for every directory that is indexed.
+            <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" /> disposes the <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndexFileWatcher" />
+            when it is disposed.
+            </remarks>
+        </member>
+        <member name="E:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndexFileWatcher.FileWatcherFault">
+            <summary>
+            Event raised when an exception is logged during file watching
+            or its updates.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader">
+            <summary>
+            Defines a storage reading mechanism for the symbols in a repository.
+            </summary>
+            <remarks>
+            This is a data layer contract and not expected to be used directly outside of the CodeIndex service.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader.FindPotentialDefinitionsAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Finds <see cref="T:Conversations.Abstractions.Symbols.SymbolRange" />s that may be the definition for the given unqualified name.
+            </summary>
+            <param name="unqualifiedName">The unqualified symbol name. e.g.: 'ISymbolReader'.</param>
+            <param name="cancellationToken">Cancels the operation.</param>
+            <returns>
+            A list of symbol definitions that could be the definitions of the <paramref name="unqualifiedName" /> based on naive name comparison.
+            </returns>
+            <remarks>
+            This method is the first step in naive, language agnostic 'Go to Definition' functionality. Note that in most languages
+            this is expected to be ambiguous and return several (potentially dozens) of matches. The caller is expected to further
+            filter down the result set by <see cref="T:Conversations.Abstractions.Symbols.SymbolKind" />, visibility, namespaces/imports, and other language rules.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader.FindSymbolsContainingPositionAsync(System.String,System.UInt32,System.Threading.CancellationToken)">
+            <summary>
+            Finds <see cref="T:Conversations.Abstractions.Symbols.SymbolRange" />s that contain the given position in the given file.
+            </summary>
+            <param name="filePath">The path to the containing file.</param>
+            <param name="position">The position to check.</param>
+            <param name="cancellationToken">Cancels the operation.</param>
+            <returns>A list of <see cref="T:Conversations.Abstractions.Symbols.SymbolRange" /> containing the given position.</returns>
+            <remarks>
+            This is method is useful for determining the fully qualified name of a symbol at a given
+            position in a file, perhaps as a heuristic for determining which names are in scope.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader.FindSymbolsContainedByRangeAsync(System.String,System.UInt32,System.UInt32,System.Threading.CancellationToken)">
+            <summary>
+            Finds <see cref="T:Conversations.Abstractions.Symbols.SymbolRange" />s that are contained within the given range in the given file.
+            </summary>
+            <param name="filePath">The path to the containing file.</param>
+            <param name="rangeStart">The start of the range to search for symbols.</param>
+            <param name="rangeEnd">The end of the range to search for symbols.</param>
+            <param name="cancellationToken">Cancels the operation.</param>
+            <returns>A list of symbols contained within the specified range.</returns>
+            <remarks>
+            Results are ordered by <see cref="P:Conversations.Abstractions.Symbols.SymbolRange.ExtentRange" /> start.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader.GetDocumentsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get all documents currently marked for indexing.
+            </summary>
+            <returns>A list of documents that are currently indexed.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageReader.GetDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Get specific metadata for specific documents.
+            </summary>
+            <param name="documentPaths">The list of documents to get.</param>
+            <param name="cancellationToken">Cancels the pending operation.</param>
+            <returns>A list of documents that are currently indexed.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageWriter">
+            <summary>
+            Defines a storage writing mechanism for the symbols in a repository.
+            </summary>
+            <remarks>
+            This is a data layer contract and not expected to be used directly outside of the CodeIndex service.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageWriter.AddDocumentsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Adds documents to the underlying database.
+            </summary>
+            <param name="documentPaths">Documents to add.</param>
+            <param name="cancellationToken">Cancels the operation.</param>
+            <returns>A task tracking the operation.</returns>
+            <remarks>
+            Documents already in the database are ignored.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageWriter.DeleteDocumentAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the document at <paramref name="filePath" /> from index storage.
+            </summary>
+            <param name="filePath">The document to delete.</param>
+            <param name="cancellationToken">Cancels the pending operation.</param>
+            <returns>A task tracking completion of the operation.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageWriter.InsertOrReplaceDocumentSymbolsAsync(System.String,System.Int64,System.Collections.Generic.IEnumerable{Conversations.Abstractions.Symbols.SymbolRange},System.Threading.CancellationToken)">
+            <summary>
+            Inserts <paramref name="symbols" /> into storage for the document at <paramref name="documentPath" />,
+            deleting and replacing any existing symbols for that document.
+            </summary>
+            <param name="documentPath">The path to the file, relative to the repo or workspace root.</param>
+            <param name="lastWriteTimeUtc">The last write time of this document in UTC timezone.</param>
+            <param name="symbols">The symbols to store.</param>
+            <param name="cancellationToken">Cancels the pending operation.</param>
+            <returns>A task tracking the completion of the operation.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.Document">
+            <summary>
+            Schema and data contract for the document table.
+            </summary>
+            <remarks>
+            Documents represent the files in the repository that are indexed and link
+            Symbols to their containing file.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.Symbol">
+            <summary>
+            Schema and data contract for the symbol table.
+            </summary>
+            <remarks>
+            Symbols represent <see cref="F:Conversations.Abstractions.Symbols.SymbolKind.Class" />, <see cref="F:Conversations.Abstractions.Symbols.SymbolKind.Method" />, etc. definitions
+            in a particular <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.Document" />.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.Symbol.DocumentId">
+            <summary>
+            Links this record to its containing <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.Document" />.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.SymbolWithFilePath">
+            <summary>
+            Data contract used for reading queries that JOIN <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.Symbol" /> with <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.Schema.Document" />.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.FindPotentialDefinitionsAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.FindSymbolsContainingPositionAsync(System.String,System.UInt32,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.FindSymbolsContainedByRangeAsync(System.String,System.UInt32,System.UInt32,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.GetDocumentsAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.GetDocumentsAsync(System.Collections.Generic.IReadOnlyList{System.String},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.CreateAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter" /> and initializes the database schema, if needed.
+            </summary>
+            <param name="databasePath">The path to the Sqlite DB.</param>
+            <param name="cancellationToken">Cancels the pending operation.</param>
+            <returns>An <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.IStorageWriter" /> for storing symbols to disk.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.DisposeAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.AddDocumentsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.DeleteDocumentAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Storage.SqlStorageReaderWriter.InsertOrReplaceDocumentSymbolsAsync(System.String,System.Int64,System.Collections.Generic.IEnumerable{Conversations.Abstractions.Symbols.SymbolRange},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.IReferenceExtractor">
+            <summary>
+            Interface for extracting reference types from a document.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.IReferenceExtractor.SupportedFileExtensions">
+            <summary>
+            Gets the file extensions that this extractor supports.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.IReferenceExtractor.ExtractReferences(System.String,System.String)">
+            <summary>
+            Extracts reference types from the given document.
+            </summary>
+            <param name="documentPath">The path to the document.</param>
+            <param name="code">The code in the document.</param>
+            <returns>A sequences of <see cref="T:Conversations.Abstractions.Symbols.SymbolRange" />s marking document references.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.IReferenceExtractor.ExtractLocalReferences(System.String,System.String,Conversations.Abstractions.Symbols.TextRange)">
+            <summary>
+            Extracts local reference types from scopes smaller than a full document, such as a method.
+            </summary>
+            <param name="documentPath"></param>
+            <param name="code"></param>
+            <param name="selection">selection to isolate source code scope.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.ISymbolExtractor">
+            <summary>
+            Abstraction for extracting symbols from a document.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.ISymbolExtractor.SupportedFileExtensions">
+            <summary>
+            Gets the file extensions that this extractor supports.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.ISymbolExtractor.ExtractSymbols(System.String,System.String)">
+            <summary>
+            Extracts symbols from the given document.
+            </summary>
+            <param name="documentPath">The path to the document.</param>
+            <param name="code">The code in the document.</param>
+            <returns>A sequences of <see cref="T:Conversations.Abstractions.Symbols.SymbolRange" />s marking document declarations.</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.PredefinedLanguages">
+            <summary>
+            The default set of well-known languages for use with <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" />.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.PredefinedLanguages.SymbolExtractors">
+            <summary>
+            The default set of well-known symbol extractors for use with <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" />.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.PredefinedLanguages.ReferenceExtractors">
+            <summary>
+            The default set of well-known reference extractors for use with <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Index.SymbolIndex" />.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.PredefinedLanguages.ContextFormatters">
+            <summary>
+            The default set of well-known context formatters for use with <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Context.SkeletonCodeGenerator" />.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.SymbolExtractorBase">
+            <summary>
+            Implements a parser that extracts interesting syntax definitions from any language
+            using GitHub's Tree-Sitter parsing library.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.SymbolExtractorBase.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.SymbolExtractorBase" /> class.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if the query contains a syntax error.</exception>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.SymbolExtractorBase.TreeSitterLanguage">
+            <summary>
+            Gets the Tree-Sitter grammar used for parsing the code.
+            </summary>
+            <remarks>
+            Additional grammars can be added by referencing the submodule and building in:
+            https://devdiv.visualstudio.com/DevDiv/_git/CSharp-Tree-Sitter.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Copilot.CodeIndex.Infrastructure.Symbols.SymbolExtractorBase.ExecuteQuery(System.String,System.String,GitHub.TreeSitter.TSQuery)">
+            <summary>
+            Extracts symbol declarations from the given code.
+            </summary>
+            <param name="filePath">The path to the source file.</param>
+            <param name="code">The code to parse.</param>
+            <param name="query">tree-sitter query to execute</param>
+            <returns>An enumerable of <see cref="T:Conversations.Abstractions.Symbols.SymbolRange" /> containing the location and fully qualified symbol names.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if parsing or loading the language fails.</exception>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+                Reserved to be used by the compiler for tracking metadata.
+                This class should not be used by developers in source code.
+            </summary>
+            <remarks>
+                This definition is provided by the <i>IsExternalInit</i> NuGet package (https://www.nuget.org/packages/IsExternalInit).
+                Please see https://github.com/manuelroemer/IsExternalInit for more information.
+            </remarks>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CreateGetterRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex" />-derived type for the CreateGetterRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner" /> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex" />.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner" /> used by methods on <see cref="T:System.Text.RegularExpressions.Regex" />.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan" /> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan" /> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateGetterRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan" /> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CreateSetterRegex_1">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex" />-derived type for the CreateSetterRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner" /> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex" />.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner" /> used by methods on <see cref="T:System.Text.RegularExpressions.Regex" />.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan" /> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan" /> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.CreateSetterRegex_1.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan" /> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex" />-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext" />, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout" /> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout" /> is non-infinite.</summary>
+        </member>
+        <member name="T:Windows.Win32.Foundation.PCWSTR">
+            <summary>
+            A pointer to a constant character string.
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Foundation.PCWSTR.Value">
+            <summary>
+            A pointer to the first character in the string. The content should be considered readonly, as it was typed as constant in the SDK.
+            </summary>
+        </member>
+        <member name="P:Windows.Win32.Foundation.PCWSTR.Length">
+            <summary>
+            Gets the number of characters up to the first null character (exclusive).
+            </summary>
+        </member>
+        <member name="M:Windows.Win32.Foundation.PCWSTR.ToString">
+            <summary>
+            Returns a <see langword="string" /> with a copy of this character array.
+            </summary>
+            <returns>A <see langword="string" />, or <see langword="null" /> if <see cref="F:Windows.Win32.Foundation.PCWSTR.Value" /> is <see langword="null" />.</returns>
+        </member>
+        <member name="M:Windows.Win32.Foundation.PCWSTR.AsSpan">
+            <summary>
+            Returns a span of the characters in this string.
+            </summary>
+        </member>
+        <member name="M:Windows.Win32.Foundation.PWSTR.AsSpan">
+            <summary>
+            Returns a span of the characters in this string.
+            </summary>
+        </member>
+        <member name="T:Windows.Win32.Storage.FileSystem.FILE_BASIC_INFO">
+            <summary>Contains the basic information for a file. Used for file handles.</summary>
+            <remarks>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/ns-winbase-file_basic_info">Learn more about this API from docs.microsoft.com</see>.</para>
+            </remarks>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_BASIC_INFO.CreationTime">
+            <summary>
+            <para>The time the file was created in <a href="https://docs.microsoft.com/windows/desktop/api/minwinbase/ns-minwinbase-filetime">FILETIME</a> format, which is a 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC).</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/ns-winbase-file_basic_info#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_BASIC_INFO.LastAccessTime">
+            <summary>
+            <para>The time the file was last accessed in <a href="https://docs.microsoft.com/windows/desktop/api/minwinbase/ns-minwinbase-filetime">FILETIME</a> format.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/ns-winbase-file_basic_info#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_BASIC_INFO.LastWriteTime">
+            <summary>
+            <para>The time the file was last written to in <a href="https://docs.microsoft.com/windows/desktop/api/minwinbase/ns-minwinbase-filetime">FILETIME</a> format.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/ns-winbase-file_basic_info#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_BASIC_INFO.ChangeTime">
+            <summary>
+            <para>The time the file was changed in <a href="https://docs.microsoft.com/windows/desktop/api/minwinbase/ns-minwinbase-filetime">FILETIME</a> format.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/ns-winbase-file_basic_info#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_BASIC_INFO.FileAttributes">
+            <summary>
+            <para>The file attributes. For a list of attributes, see <a href="https://docs.microsoft.com/windows/desktop/FileIO/file-attribute-constants">File Attribute Constants</a>. If this is set to 0 in a <b>FILE_BASIC_INFO</b> structure passed to <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileinformationbyhandle">SetFileInformationByHandle</a> then none of the attributes are changed.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/ns-winbase-file_basic_info#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="T:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS">
+            <summary>Identifies the type of file information that GetFileInformationByHandleEx should retrieve or SetFileInformationByHandle should set.</summary>
+            <remarks>
+            <para>As noted in the preceding section, some file information classes are valid only for use with <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. Others are valid only for use with <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileinformationbyhandle">SetFileInformationByHandle</a>. Where neither function is mentioned, the information class is valid with both functions.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#">Read more on docs.microsoft.com</see>.</para>
+            </remarks>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileBasicInfo">
+            <summary>
+            <para>Minimal information for the file should be retrieved or set. Used for file handles. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_basic_info">FILE_BASIC_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileStandardInfo">
+            <summary>
+            <para>Extended information for the file should be retrieved. Used for file handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_standard_info">FILE_STANDARD_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileNameInfo">
+            <summary>
+            <para>The file name should be retrieved. Used for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_name_info">FILE_NAME_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileRenameInfo">
+            <summary>
+            <para>The file name should be changed. Used for file handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileinformationbyhandle">SetFileInformationByHandle</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_rename_info">FILE_RENAME_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileDispositionInfo">
+            <summary>
+            <para>The file should be deleted. Used for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileinformationbyhandle">SetFileInformationByHandle</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_disposition_info">FILE_DISPOSITION_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileAllocationInfo">
+            <summary>
+            <para>The file allocation information should be changed. Used for file handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileinformationbyhandle">SetFileInformationByHandle</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_allocation_info">FILE ALLOCATION INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileEndOfFileInfo">
+            <summary>
+            <para>The end of the file should be set. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileinformationbyhandle">SetFileInformationByHandle</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_end_of_file_info">FILE_END_OF_FILE_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileStreamInfo">
+            <summary>
+            <para>File stream information for the specified file should be retrieved. Used for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_stream_info">FILE_STREAM_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileCompressionInfo">
+            <summary>
+            <para>File compression information should be retrieved. Used for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_compression_info">FILE_COMPRESSION_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileAttributeTagInfo">
+            <summary>
+            <para>File attribute information should be retrieved. Used for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_attribute_tag_info">FILE_ATTRIBUTE_TAG_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileIdBothDirectoryInfo">
+            <summary>
+            <para>Files in the specified directory should be retrieved. Used for directory handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. The number of files returned for each call to <b>GetFileInformationByHandleEx</b> depends on the size of the buffer that is passed to the function. Any subsequent calls to <b>GetFileInformationByHandleEx</b> on the same handle will resume the enumeration operation after the last file is returned. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_id_both_dir_info">FILE_ID_BOTH_DIR_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileIdBothDirectoryRestartInfo">
+            <summary>
+            <para>Identical to <b>FileIdBothDirectoryInfo</b>, but forces the enumeration operation to start again from the beginning. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_id_both_dir_info">FILE_ID_BOTH_DIR_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileIoPriorityHintInfo">
+            <summary>
+            <para>Priority hint information should be  set. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileinformationbyhandle">SetFileInformationByHandle</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_io_priority_hint_info">FILE_IO_PRIORITY_HINT_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileRemoteProtocolInfo">
+            <summary>
+            <para>File remote protocol information should be retrieved. Use for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_remote_protocol_info">FILE_REMOTE_PROTOCOL_INFO</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileFullDirectoryInfo">
+            <summary>
+            <para>Files in the specified directory should be retrieved. Used for directory handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_full_dir_info">FILE_FULL_DIR_INFO</a>. <b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This value is not supported before Windows 8 and Windows Server 2012</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileFullDirectoryRestartInfo">
+            <summary>
+            <para>Identical to <b>FileFullDirectoryInfo</b>, but forces the enumeration operation to start again from the beginning. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_full_dir_info">FILE_FULL_DIR_INFO</a>. <b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This value is not supported before Windows 8 and Windows Server 2012</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileStorageInfo">
+            <summary>
+            <para>File storage information should be retrieved. Use for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_storage_info">FILE_STORAGE_INFO</a>. <b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This value is not supported before Windows 8 and Windows Server 2012</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileAlignmentInfo">
+            <summary>
+            <para>File alignment information should be retrieved. Use for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_alignment_info">FILE_ALIGNMENT_INFO</a>. <b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This value is not supported before Windows 8 and Windows Server 2012</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileIdInfo">
+            <summary>
+            <para>File information should be retrieved. Use for any handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_id_info">FILE_ID_INFO</a>. <b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This value is not supported before Windows 8 and Windows Server 2012</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileIdExtdDirectoryInfo">
+            <summary>
+            <para>Files in the specified directory should be retrieved. Used for directory handles. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_id_extd_dir_info">FILE_ID_EXTD_DIR_INFO</a>. <b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This value is not supported before Windows 8 and Windows Server 2012</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileIdExtdDirectoryRestartInfo">
+            <summary>
+            <para>Identical to <b>FileIdExtdDirectoryInfo</b>, but forces the enumeration operation to start again from the beginning. Use only when calling <a href="https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-getfileinformationbyhandleex">GetFileInformationByHandleEx</a>. See <a href="https://docs.microsoft.com/windows/desktop/api/winbase/ns-winbase-file_id_extd_dir_info">FILE_ID_EXTD_DIR_INFO</a>. <b>Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:  </b>This value is not supported before Windows 8 and Windows Server 2012</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//minwinbase/ne-minwinbase-file_info_by_handle_class#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileDispositionInfoEx">
+            <summary></summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.FileRenameInfoEx">
+            <summary></summary>
+        </member>
+        <member name="F:Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS.MaximumFileInfoByHandleClass">
+            <summary>This value is used for validation. Supported values are less than this value.</summary>
+        </member>
+        <member name="T:Windows.Win32.PInvoke">
+            <content>
+            Contains extern methods from "Kernel32.dll".
+            </content>
+        </member>
+        <member name="M:Windows.Win32.PInvoke.CloseHandle(Windows.Win32.Foundation.HANDLE)">
+            <summary>Closes an open object handle.</summary>
+            <param name="hObject">A valid handle to an open object.</param>
+            <returns>
+            <para>If the function succeeds, the return value is nonzero. If the function fails, the return value is zero. To get extended error information, call <a href="/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a>. If the application is running under a debugger,  the function will throw an exception if it receives either a  handle value that is not valid  or a pseudo-handle value. This can happen if you close a handle twice, or if you  call <b>CloseHandle</b> on a handle returned by the <a href="/windows/desktop/api/fileapi/nf-fileapi-findfirstfilea">FindFirstFile</a> function instead of calling the <a href="/windows/desktop/api/fileapi/nf-fileapi-findclose">FindClose</a> function.</para>
+            </returns>
+            <remarks>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//handleapi/nf-handleapi-closehandle">Learn more about this API from docs.microsoft.com</see>.</para>
+            </remarks>
+        </member>
+        <member name="M:Windows.Win32.PInvoke.GetFileInformationByHandleEx(System.Runtime.InteropServices.SafeHandle,Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS,System.Void*,System.UInt32)">
+            <inheritdoc cref="M:Windows.Win32.PInvoke.GetFileInformationByHandleEx(Windows.Win32.Foundation.HANDLE,Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS,System.Void*,System.UInt32)" />
+        </member>
+        <member name="M:Windows.Win32.PInvoke.GetFileInformationByHandleEx(Windows.Win32.Foundation.HANDLE,Windows.Win32.Storage.FileSystem.FILE_INFO_BY_HANDLE_CLASS,System.Void*,System.UInt32)">
+            <summary>Retrieves file information for the specified file.</summary>
+            <param name="hFile">
+            <para>A handle to the file that contains the information to be retrieved. This handle should not be a pipe handle.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/nf-winbase-getfileinformationbyhandleex#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="FileInformationClass">
+            <para>A <a href="https://docs.microsoft.com/windows/desktop/api/minwinbase/ne-minwinbase-file_info_by_handle_class">FILE_INFO_BY_HANDLE_CLASS</a> enumeration value that specifies the type of information to be retrieved. For a table of valid values, see the Remarks section.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/nf-winbase-getfileinformationbyhandleex#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="lpFileInformation">
+            <para>A pointer to the buffer that receives the requested file information. The structure that is returned corresponds to the class that is specified by <i>FileInformationClass</i>. For a table of valid structure types, see the Remarks section.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/nf-winbase-getfileinformationbyhandleex#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="dwBufferSize">The size of the <i>lpFileInformation</i> buffer, in bytes.</param>
+            <returns>
+            <para>If the function succeeds, the return value is nonzero and file information data is contained in the buffer pointed to by the <i>lpFileInformation</i> parameter. If the function fails, the return value is zero. To get extended error information, call <a href="/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a>.</para>
+            </returns>
+            <remarks>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//winbase/nf-winbase-getfileinformationbyhandleex">Learn more about this API from docs.microsoft.com</see>.</para>
+            </remarks>
+        </member>
+        <member name="M:Windows.Win32.PInvoke.CreateFile(System.String,Windows.Win32.Storage.FileSystem.FILE_ACCESS_FLAGS,Windows.Win32.Storage.FileSystem.FILE_SHARE_MODE,System.Nullable{Windows.Win32.Security.SECURITY_ATTRIBUTES},Windows.Win32.Storage.FileSystem.FILE_CREATION_DISPOSITION,Windows.Win32.Storage.FileSystem.FILE_FLAGS_AND_ATTRIBUTES,System.Runtime.InteropServices.SafeHandle)">
+            <inheritdoc cref="M:Windows.Win32.PInvoke.CreateFile(Windows.Win32.Foundation.PCWSTR,Windows.Win32.Storage.FileSystem.FILE_ACCESS_FLAGS,Windows.Win32.Storage.FileSystem.FILE_SHARE_MODE,Windows.Win32.Security.SECURITY_ATTRIBUTES*,Windows.Win32.Storage.FileSystem.FILE_CREATION_DISPOSITION,Windows.Win32.Storage.FileSystem.FILE_FLAGS_AND_ATTRIBUTES,Windows.Win32.Foundation.HANDLE)" />
+        </member>
+        <member name="M:Windows.Win32.PInvoke.CreateFile(Windows.Win32.Foundation.PCWSTR,Windows.Win32.Storage.FileSystem.FILE_ACCESS_FLAGS,Windows.Win32.Storage.FileSystem.FILE_SHARE_MODE,Windows.Win32.Security.SECURITY_ATTRIBUTES*,Windows.Win32.Storage.FileSystem.FILE_CREATION_DISPOSITION,Windows.Win32.Storage.FileSystem.FILE_FLAGS_AND_ATTRIBUTES,Windows.Win32.Foundation.HANDLE)">
+            <summary>Creates or opens a file or I/O device. The most commonly used I/O devices are as follows:\_file, file stream, directory, physical disk, volume, console buffer, tape drive, communications resource, mailslot, and pipe.</summary>
+            <param name="lpFileName">
+            <para>The name of the file or device to be created or opened. You may use either forward slashes (/) or backslashes (\\) in this name. In the ANSI version of this function, the name is limited to <b>MAX_PATH</b> characters. To extend this limit to 32,767 wide characters, use this Unicode version of the function and prepend "\\\\?\\" to the path. For more information, see <a href="https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file">Naming Files, Paths, and Namespaces</a>. For information on special device names, see <a href="https://docs.microsoft.com/windows/desktop/FileIO/defining-an-ms-dos-device-name">Defining an MS-DOS Device Name</a>. To create a file stream, specify the name of the file, a colon, and then the name of the stream. For more information, see <a href="https://docs.microsoft.com/windows/desktop/FileIO/file-streams">File Streams</a>. <div class="alert"><b>Tip</b>  Starting with Windows 10, version 1607, for the unicode version of this function (<b>CreateFileW</b>), you can opt-in to remove the <b>MAX_PATH</b> limitation without prepending "\\?\". See the "Maximum Path Length Limitation" section of <a href="https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file">Naming Files, Paths, and Namespaces</a> for details.</div> <div> </div></para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="dwDesiredAccess">
+            <para>The requested access to the file or device, which can be summarized as read, write, both or neither zero). The most commonly used values are <b>GENERIC_READ</b>, <b>GENERIC_WRITE</b>, or both (<c>GENERIC_READ | GENERIC_WRITE</c>). For more information, see <a href="https://docs.microsoft.com/windows/desktop/SecAuthZ/generic-access-rights">Generic Access Rights</a>, <a href="https://docs.microsoft.com/windows/desktop/FileIO/file-security-and-access-rights">File Security and Access Rights</a>, <a href="https://docs.microsoft.com/windows/desktop/FileIO/file-access-rights-constants">File Access Rights Constants</a>, and <a href="https://docs.microsoft.com/windows/desktop/SecAuthZ/access-mask">ACCESS_MASK</a>. If this parameter is zero, the application can query certain metadata such as file, directory, or device attributes without accessing that file or device, even if <b>GENERIC_READ</b> access would have been denied. You cannot request an access mode that conflicts with the sharing mode that is specified by the <i>dwShareMode</i> parameter in an open request that already has an open handle. For more information, see the Remarks section of this topic and <a href="https://docs.microsoft.com/windows/desktop/FileIO/creating-and-opening-files">Creating and Opening Files</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="dwShareMode">
+            <para>The requested sharing mode of the file or device, which can be read, write, both, delete, all of these, or none (refer to the following table). Access requests to attributes or extended attributes are not affected by this flag. If this parameter is zero and <b>CreateFile</b> succeeds, the file or device cannot be shared and cannot be opened again until the handle to the file or device is closed. For more information, see the Remarks section. You cannot request a sharing mode that conflicts with the access mode that is specified in an existing request that has an open handle. <b>CreateFile</b> would fail and the <a href="https://docs.microsoft.com/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a> function would return <b>ERROR_SHARING_VIOLATION</b>. To enable a process to share a file or device while another process has the file or device open, use a</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="lpSecurityAttributes">
+            <para>A pointer to a <a href="https://docs.microsoft.com/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)">SECURITY_ATTRIBUTES</a> structure that contains two separate but related data members: an optional security descriptor, and a Boolean value that determines whether the returned handle can be inherited by child processes. This parameter can be <b>NULL</b>. If this parameter is <b>NULL</b>, the handle returned by <b>CreateFile</b> cannot be inherited by any child processes the application may create and the file or device associated with the returned handle gets a default security descriptor. The <b>lpSecurityDescriptor</b> member of the structure specifies a <a href="https://docs.microsoft.com/windows/desktop/api/winnt/ns-winnt-security_descriptor">SECURITY_DESCRIPTOR</a> for a file or device. If this member is <b>NULL</b>, the file or device associated with the returned handle is assigned a default security descriptor. <b>CreateFile</b> ignores the <b>lpSecurityDescriptor</b> member when opening an existing file or device, but continues to use the <b>bInheritHandle</b> member. The <b>bInheritHandle</b>member of the structure specifies whether the returned handle can be inherited. For more information, see the Remarks section.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="dwCreationDisposition">
+            <para>An action to take on a file or device that exists or does not exist. For devices other than files, this parameter is usually set to <b>OPEN_EXISTING</b>. For more information, see the Remarks section.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="dwFlagsAndAttributes">
+            <para>The file or device attributes and flags, <b>FILE_ATTRIBUTE_NORMAL</b> being the most common default value for files. This parameter can include any combination of the available file attributes (<b>FILE_ATTRIBUTE_*</b>). All other file attributes override <b>FILE_ATTRIBUTE_NORMAL</b>. This parameter can also contain combinations of flags (<b>FILE_FLAG_*</b>) for control of file or device caching behavior, access modes, and other special-purpose flags. These combine with any <b>FILE_ATTRIBUTE_*</b> values. This parameter can also contain Security Quality of Service (SQOS) information by specifying the <b>SECURITY_SQOS_PRESENT</b> flag. Additional SQOS-related flags information is presented in the table following the attributes and flags tables. <div class="alert"><b>Note</b>  When <b>CreateFile</b> opens an existing file, it generally combines the file flags with the file attributes of the existing file, and ignores any file attributes supplied as part of <i>dwFlagsAndAttributes</i>. Special cases are detailed in <a href="https://docs.microsoft.com/windows/desktop/FileIO/creating-and-opening-files">Creating and Opening Files</a>.</div> <div> </div> Some of the following file attributes and flags may only apply to files and not necessarily all other types of devices that <b>CreateFile</b> can open. For additional information, see the Remarks section of this topic and <a href="https://docs.microsoft.com/windows/desktop/FileIO/creating-and-opening-files">Creating and Opening Files</a>. For more advanced access to file attributes, see <a href="https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-setfileattributesa">SetFileAttributes</a>. For a complete list of all file attributes with their values and descriptions, see <a href="https://docs.microsoft.com/windows/desktop/FileIO/file-attribute-constants">File Attribute Constants</a>. </para>
+            <para>This doc was truncated.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <param name="hTemplateFile">
+            <para>A valid handle to a template file with the <b>GENERIC_READ</b> access right. The template file supplies file attributes and extended attributes for the file that is being created. This parameter can be <b>NULL</b>. When opening an existing file, <b>CreateFile</b> ignores this parameter. When opening a new encrypted file, the file inherits the discretionary access control list from its parent directory. For additional information, see <a href="https://docs.microsoft.com/windows/desktop/FileIO/file-encryption">File Encryption</a>.</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew#parameters">Read more on docs.microsoft.com</see>.</para>
+            </param>
+            <returns>
+            <para>If the function succeeds, the return value is an open handle to the specified file, device, named pipe, or mail slot. If the function fails, the return value is <b>INVALID_HANDLE_VALUE</b>. To get extended error information, call <a href="/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror">GetLastError</a>.</para>
+            </returns>
+            <remarks>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//fileapi/nf-fileapi-createfilew">Learn more about this API from docs.microsoft.com</see>.</para>
+            </remarks>
+        </member>
+        <member name="T:Windows.Win32.Security.SECURITY_ATTRIBUTES">
+            <summary>The SECURITY_ATTRIBUTES structure contains the security descriptor for an object and specifies whether the handle retrieved by specifying this structure is inheritable.</summary>
+            <remarks>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//wtypesbase/ns-wtypesbase-security_attributes#">Read more on docs.microsoft.com</see>.</para>
+            </remarks>
+        </member>
+        <member name="F:Windows.Win32.Security.SECURITY_ATTRIBUTES.nLength">
+            <summary>The size, in bytes, of this structure. Set this value to the size of the **SECURITY\_ATTRIBUTES** structure.</summary>
+        </member>
+        <member name="F:Windows.Win32.Security.SECURITY_ATTRIBUTES.lpSecurityDescriptor">
+            <summary>
+            <para>A pointer to a [**SECURITY\_DESCRIPTOR**](../winnt/ns-winnt-security_descriptor.md) structure that controls access to the object. If the value of this member is **NULL**, the object is assigned the default security descriptor associated with the [*access token*](/windows/win32/secauthz/access-tokens) of the calling process. This is not the same as granting access to everyone by assigning a **NULL** [*discretionary access control list*](/windows/win32/secauthz/dacls-and-aces) (DACL). By default, the default DACL in the access token of a process allows access only to the user represented by the access token. For information about creating a security descriptor, see [Creating a Security Descriptor](/windows/win32/secauthz/creating-a-security-descriptor-for-a-new-object-in-c--).</para>
+            <para><see href="https://docs.microsoft.com/windows/win32/api//wtypesbase/ns-wtypesbase-security_attributes#members">Read more on docs.microsoft.com</see>.</para>
+            </summary>
+        </member>
+        <member name="F:Windows.Win32.Security.SECURITY_ATTRIBUTES.bInheritHandle">
+            <summary>A Boolean value that specifies whether the returned handle is inherited when a new process is created. If this member is **TRUE**, the new process inherits the handle.</summary>
+        </member>
+    </members>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" /><DigestValue>D/zOuFhPrUWLXw8Sw1THYjn3C/L5YF9K13Z/iJL041M=</DigestValue></Reference></SignedInfo><SignatureValue>RbtqX85a/3ZMOlb5bN3O0kflgKGGgmc2T+YSvFA31XFguj2iKBdmROCKoyospi+0e2IcT114+2KES1WSXWdyi7uHnW7V+mg8EAtQs8o6wGwNZMC3bJvt09SCsZWwY85ZM2nsQQjuxLawNTZV1wLdW/XYRvlW2NIoAxlQN1Oac0N+LMYjhBQYe2/SqPhi8e35nGFYX8leDI4Fjd2cjzb2B0V7bvPo54wMFEmzMOT+unKxSrVJyGfl1kS/sLs701xEu/gpWO2N0CgMyuxUGK/WoCAYmkSq6ifonA8s4WMUKw4vze6VhUlaEmUXkvPSYg9/kvLp5/aGqVho7ZZ05vgy/g==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>zkvLNa2un9GBrYNDoRGkGv7d0PqtTBB4ViYakFbjuWpmF0KcvDAzzaCWJPhVgIXjz+S8cHEoHuWnp/n+UOljT3ehA8Rs6Lb1aTYub3tB/e0txewv2sQ3yscjYdtTBtFvEm9L8Yv76K3Cxzi/Yvrdg+sr7w8y5RHn1Am0Ff8xggY1xpWCXFI+kQM18njQDcUqSlwBnexYfqHBhzz6YXA/S0EziYBu2O2mM7R6gSyYkEOHgIGTVOGnOvvC5xBgC4KNcnQuQSRLiUI2CmzU8vefR6ykruyzt1rNMPI8OqWHQtSDKXU5JNqbk4GNjwzcwbSzOHrxuxWHq91l/vLdVDGDUw==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate></X509Data></KeyInfo><Object Id="ts-countersig"><X509Data><X509Certificate>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</X509Certificate><X509Certificate>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</X509Certificate></X509Data><CounterSignature ts-format="cms-timestamp-message" xmlns="http://schemas.microsoft.com/xmldsig/timestamp/2003">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</CounterSignature></Object></Signature></doc>
