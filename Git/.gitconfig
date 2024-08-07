@@ -1,8 +1,9 @@
 [push]
 	default = simple
 [user]	
-	name = Alexander Gonzalez
-	email = alexglez.rae@gmail.com
+	name = Alex Gonzalez
+	email = alex.gonzalez@ukg.com
+	signingKey = B2BE4D436162A400
 [merge]
 	tool = meld
 	guitool = meld
@@ -17,6 +18,7 @@
 [core]
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
 	whitespace = -trailing-space,-indent-with-non-tab,-tab-in-indent
+	filemode = false
 [alias]
 	st = status
 	br = branch	
@@ -28,7 +30,7 @@
 	com = checkout main		
 	cor = "!f() { git del \"$1\" & git rlh && git fetch origin \"$1\" && git checkout -b \"$1\" origin/\"$1\" && git lg; }; f"
 	this = rev-parse --abbrev-ref HEAD
-	ac = !git add -A && git commit -m
+	ac = !git add -A && git commit -S -m
 	acu = "!f() { git add -A && git commit -m \"$(git this|tail -n 1) $1\" && git lg; }; f"
 	amend = !git add -A && git commit --amend --no-edit
 	rename = !git add -A && git commit --amend
@@ -95,3 +97,5 @@
 [http]
 	sslVerify = true
 	sslbackend = schannel
+[commit]
+	gpgsign = true
