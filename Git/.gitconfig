@@ -94,6 +94,7 @@
 	directory = C:/Projects/ps-payment-services
 	directory = C:/Projects/ps-tax-integration
 	directory = C:/Projects/ps-reporting
+	directory = C:/Projects/ps-common-packages
 [http]
 	sslVerify = true
 	sslbackend = schannel
