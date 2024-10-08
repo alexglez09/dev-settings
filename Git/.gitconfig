@@ -18,7 +18,7 @@
 [core]
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
 	whitespace = -trailing-space,-indent-with-non-tab,-tab-in-indent
-	filemode = false
+	fileMode = false
 [alias]
 	st = status
 	br = branch	
