@@ -37,8 +37,8 @@
 	rss = reset --soft	
 	rsh = "!f() { git clean -f && git reset --hard \"$1\"; }; f"
 	rsa = "!f() { git amend && git rss \"$1\" && git amend && git lg; }; f"
-	rsr = "!f() { git fetch origin $(git this|tail -n 1) && git rsh origin/$(git this|tail -n 1) && git lg; }; f"
-	rlh = "!f() { git rsh $(git hash) && git clean -f && git lg; }; f"	
+	rsr = "!f() { git fetch origin $(git this|tail -n 1) && git rsh origin/$(git this|tail -n 1); }; f"
+	rlh = "!f() { git rsh $(git hash) && git clean -f; }; f"	
 	sl = stash list
 	ss = "!f() { git stash save \"$1\" && git sl; }; f"
 	sa = "!f() { git stash apply stash@{\"$1\"}; }; f"
@@ -67,7 +67,6 @@
 	aliass = config --get-regexp alias
 	cg = config --global
 	namess = log -1 -p -w --name-only
-	dropBrs = "!f() { git branch | grep -v main | xargs git branch -D; }; f"
 	untrack = update-index --assume-unchanged
 	track = update-index --no-assume-unchanged
 	del = branch -D
