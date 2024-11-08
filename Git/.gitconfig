@@ -60,7 +60,7 @@
 	lg = log --graph --abbrev-commit -5 --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'	
 	lr = "!f() { git fetch origin $(git this|tail -n 1) && git lg origin/$(git this|tail -n 1); }; f"
 	lrb = "!f() { git fetch origin \"$1\" && git lg origin/\"$1\"; }; f"
-	me = lg --author='Alexander Gonza'
+	me = lg --author='Alex Gonzalez' --author='Alexander Gonzalez' -25
 	find = "!f() { git log --grep=\"$1\"; }; f"
 	rl = reflog -10 --oneline
 	rld = reflog -10 --oneline --date=iso
