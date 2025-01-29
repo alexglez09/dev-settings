@@ -2,8 +2,8 @@
 	default = simple
 [user]	
 	name = Alex Gonzalez
-	email = alex.gonzalez@ukg.com
-	signingKey = B2BE4D436162A400
+	email = <email>
+	signingKey = <signingKey>
 [merge]
 	tool = meld
 	guitool = meld
@@ -84,16 +84,6 @@
 	prune = false
 [rebase]
 	autoStash = false
-[safe]
-	directory = C:/Users/alexandergo	
-	directory = C:/Users/alex.gonzalez
-	directory = C:/Dev/dev-refs
-	directory = C:/Projects/environment-config
-	directory = C:/Projects/teams	
-	directory = C:/Projects/ps-payment-services
-	directory = C:/Projects/ps-tax-integration
-	directory = C:/Projects/ps-reporting
-	directory = C:/Projects/ps-common-packages
 [http]
 	sslVerify = true
 	sslbackend = schannel
